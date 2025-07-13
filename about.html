@@ -5,38 +5,10 @@
   <title>About | Echosight</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <!-- NAVIGATION (BURGER MENU) -->
 <!-- NAVIGATION (BURGER MENU WITH LOGO) -->
-<style>
-  .nav-bar { 
-    background: #1b2124; 
-    color: #fff; 
-    padding: 0.8em 0; 
-    position: fixed;    /* Fixed to the top */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    left: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-  .nav-bar .nav-content { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-  .nav-bar .logo-area { display: flex; align-items: center; gap: 12px; }
-  .nav-bar .logo-img { width: 38px; height: 38px; object-fit: contain; }
-  .nav-bar .logo-text { font-size: 1.4em; font-weight: bold; letter-spacing: 1px; color: #fff; text-decoration: none; }
-  .nav-bar .menu-links { display: flex; gap: 2em; }
-  .nav-bar a { color: #fff; text-decoration: none; font-weight: 500; }
-  .nav-bar .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-  .nav-bar .burger span { display: block; width: 26px; height: 3px; background: #39c5bb; border-radius: 2px; }
-  @media (max-width: 800px) {
-    .nav-bar .menu-links { display: none; position: absolute; right: 0; top: 100%; background: #232b2f; flex-direction: column; width: 100%; padding: 1em 0; z-index: 100; }
-    .nav-bar .menu-links.open { display: flex; }
-    .nav-bar .burger { display: flex; }
-    .nav-bar .logo-area { gap: 10px; }
-    .nav-bar .logo-img { width: 32px; height: 32px; }
-    .nav-bar .logo-text { font-size: 1.12em; }
-  }
-</style>
 <nav class="nav-bar">
   <div class="nav-content">
     <span class="logo-area">
@@ -54,12 +26,6 @@
     </div>
   </div>
 </nav>
-<script>
-  const burgerBtn = document.getElementById('burgerBtn');
-  const mainMenu = document.getElementById('mainMenu');
-  burgerBtn.onclick = () => mainMenu.classList.toggle('open');
-  burgerBtn.onkeydown = e => { if (e.key === 'Enter') mainMenu.classList.toggle('open'); }
-</script>
 
 
 
@@ -88,6 +54,7 @@
 
 <footer style="text-align:center;padding:1em 0;color:#aaa;">
   &copy; 2025 Echosight by Jack Curry. | <a href="https://www.instagram.com/echosight.uk/" target="_blank">Instagram</a> | <a href="contact.html">Contact</a>
+  <script src="assets/js/nav.js"></script>
 </footer>
 </body>
 </html>
