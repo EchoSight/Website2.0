@@ -421,3 +421,10 @@ img {
   font-weight: bold;
   white-space: nowrap;
 }
+
+/* Fine print or terms and conditions style */
+.fine-print {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #555;
+}
