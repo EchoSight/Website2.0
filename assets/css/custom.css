@@ -382,6 +382,16 @@ img {
   border-radius: 10px;
   box-shadow: 0 2px 14px rgba(30,30,45,0.08);
 }
+.about-video {
+  text-align: center;
+  margin: 2em auto;
+  max-width: 700px;
+}
+.about-video video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
 .stacked-list {
   line-height: 1.6;
 }
