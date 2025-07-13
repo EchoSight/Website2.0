@@ -358,7 +358,7 @@ img {
   background: #e8f7f6;
   border-radius: 12px;
   padding: 2em;
-  margin: 2em 0;
+  margin: 2em auto;
 }
 .no-top-margin {
   margin-top: 0;
