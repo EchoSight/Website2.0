@@ -6,6 +6,11 @@ body {
   padding-top: 64px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .hero-video {
   position: relative;
   width: 100%;
@@ -18,6 +23,11 @@ body {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.85);
+}
+@media (max-width: 600px) {
+  .hero-video {
+    height: 300px;
+  }
 }
 .hero-overlay {
   position: absolute;
@@ -369,6 +379,10 @@ body {
 .nav-bar .burger {
   border: none;
   background: transparent;
+}
+
+.table-wrapper {
+  overflow-x: auto;
 }
 .pricing-table {
   width: 100%;
