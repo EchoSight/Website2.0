@@ -167,7 +167,7 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="burger" id="burgerBtn" aria-label="Open menu" tabindex="0">
+    <div class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" tabindex="0">
       <span></span><span></span><span></span>
     </div>
   </div>
@@ -175,8 +175,12 @@
 <script>
   const burgerBtn = document.getElementById('burgerBtn');
   const mainMenu = document.getElementById('mainMenu');
-  burgerBtn.onclick = () => mainMenu.classList.toggle('open');
-  burgerBtn.onkeydown = e => { if (e.key === 'Enter') mainMenu.classList.toggle('open'); }
+  const toggleMenu = () => {
+    const isOpen = mainMenu.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', isOpen);
+  };
+  burgerBtn.onclick = toggleMenu;
+  burgerBtn.onkeydown = e => { if (e.key === 'Enter') toggleMenu(); };
 </script>
 
 <!-- Hero Section -->
