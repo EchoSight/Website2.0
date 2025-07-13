@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/custom.css">
+  <meta name="description" content="Specialist bat survey support with thermal imaging and acoustic analysis." />
   </head>
 <body>
 
 <!-- NAVIGATION (BURGER MENU WITH LOGO) -->
+<header>
 <nav class="nav-bar">
   <div class="nav-content">
     <span class="logo-area">
@@ -23,14 +25,17 @@
       <a href="resources.html">Resources</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="burger" id="burgerBtn" aria-label="Open menu" tabindex="0">
+    <button class="burger" id="burgerBtn" aria-label="Open menu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
 </nav>
+</header>
+
+<main>
 
 <!-- Hero Section -->
-<div class="hero-video">
+<section class="hero-video">
   <video autoplay muted loop playsinline>
     <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
   </video>
@@ -43,14 +48,14 @@
     </p>
     <a href="contact.html" class="cta-btn">Request a Quote</a>
   </div>
-</div>
+</section>
 
 <!-- Feature Cards Section (Contained) -->
-<div class="container" style="background:#e8f7f6;border-radius:14px;padding:2.2em 1.2em 2.8em 1.2em;margin:2em auto 2em auto;box-shadow:0 6px 32px rgba(57,197,187,0.09),0 1.5px 12px rgba(0,0,0,0.07);">
-  <p style="text-align:center;max-width:700px;margin:0 auto 2.5em;">
-    <b>
+<section class="container feature-box">
+  <p class="intro-center">
+    <strong>
       Echosight provides specialist bat survey support for ecology consultancies—offering a comprehensive review service that combines expert fieldwork and human analysis with the latest technology. Every dataset is double-checked to ensure no bats are missed. All surveys use my own high-spec equipment and bespoke tools. Flexible and reliable support, whenever you need it.
-    </b>
+    </strong>
   </p>
   <div class="feature-cards">
     <div class="feature-card">
@@ -75,47 +80,47 @@
       <a href="services.html#reporting">Learn more about reporting &rarr;</a>
     </div>
   </div>
-</div>
+</section>
 
 <!-- See the Difference (Contained) -->
-<div class="container">
+<section class="container">
   <h2>See the Difference</h2>
   <div class="see-diff-cards">
     <div>
-      <video controls width="100%" style="border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.13);">
-        <source src="assets/videos/emergence-thermal-example.mp4" type="video/mp4">
+      <video controls width="100%" class="media-frame">
+        <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
       </video>
     </div>
     <div>
-      <video controls width="100%" style="border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.13);">
-        <source src="assets/videos/motion-tracker-demo.mp4" type="video/mp4">
+      <video controls width="100%" class="media-frame">
+        <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
       </video>
     </div>
     <div>
-      <img src="assets/images/acoustic-analysis.jpg" alt="Acoustic Analysis Screenshot" style="border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.13);width:100%;">
+      <img src="images/header.jpg" alt="Acoustic Analysis Screenshot" class="media-frame" width="100%">
     </div>
   </div>
-  <p style="margin-top:1em;font-style:italic;">All bat survey footage and analyses are generated in-house using Echosight’s own equipment and AI workflow.</p>
-</div>
+  <p class="section-note">All bat survey footage and analyses are generated in-house using Echosight’s own equipment and AI workflow.</p>
+</section>
 
 <!-- Pricing/Packages (Contained) -->
-<div class="container pricing">
+<section class="container pricing">
   <h2>Transparent Pricing</h2>
-  <p><b>Typical Dusk Emergence Package</b></p>
+  <p><strong>Typical Dusk Emergence Package</strong></p>
   <ul>
     <li>Thermal, acoustic, and video survey (within 60 miles of Newbury)</li>
     <li>AI-powered emergence and activity analysis</li>
     <li>Consultant-ready report with timestamped figures & species interpretation</li>
     <li>Email/phone follow-up support</li>
   </ul>
-  <div style="font-size:2em;font-weight:bold; color:#222; margin:1em 0 0.5em;">£395</div>
+  <div class="price-tag">£395</div>
   <div>Fixed price. No hidden fees.</div>
-</div>
+</section>
 
 <!-- About/Trust Section (Contained) -->
-<div class="container">
+<section class="container">
   <div class="about-row">
-    <img src="assets/images/jack-headshot.jpg" class="about-img" alt="Jack Curry">
+    <img src="images/header.jpg" class="about-img" alt="Jack Curry">
     <div>
       <h2>Meet Jack Curry</h2>
       <p>
@@ -126,10 +131,10 @@
       <p><a href="about.html">More about Jack & Echosight &raquo;</a></p>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Why Choose Echosight/Testimonials (Contained) -->
-<div class="container">
+<section class="container">
   <h2>Why Choose Echosight?</h2>
   <ul>
     <li>Consultancy support, not competition—no direct-to-end-client work</li>
@@ -139,20 +144,21 @@
   </ul>
   <!-- Placeholder testimonial -->
   <div class="testimonial">
-    <b>“The quality of data and reporting from Echosight saved us hours on every project. Jack’s technology is a game changer for bat survey delivery.”</b>
+    <strong>“The quality of data and reporting from Echosight saved us hours on every project. Jack’s technology is a game changer for bat survey delivery.”</strong>
     <br>– Senior Ecologist, [Consultancy Name]
   </div>
-</div>
+</section>
 
 <!-- Contact/Booking Section (Contained) -->
-<div class="container">
+<section class="container">
   <h2>Ready to Book?</h2>
   <p>Click below to get in touch, check availability, or request a sample report.</p>
   <a href="contact.html" class="cta-btn">Contact Me</a>
-</div>
+</section>
+</main>
 
 <!-- Footer -->
-<footer style="text-align:center;padding:1em 0;color:#aaa;">
+<footer class="site-footer">
   &copy; 2025 Echosight by Jack Curry. | <a href="https://www.instagram.com/echosight.uk/" target="_blank">Instagram</a> | <a href="contact.html">Contact</a>
 </footer>
   <script src="assets/js/nav.js"></script>

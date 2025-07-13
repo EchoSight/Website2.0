@@ -10,6 +10,7 @@
 <body>
 
     <!-- NAVIGATION (BURGER MENU WITH LOGO) -->
+<header>
 <nav class="nav-bar">
   <div class="nav-content">
     <span class="logo-area">
@@ -23,34 +24,35 @@
       <a href="resources.html">Resources</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="burger" id="burgerBtn" aria-label="Open menu" tabindex="0">
+    <button class="burger" id="burgerBtn" aria-label="Open menu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
 </nav>
+</header>
 
-<div class="container" style="max-width:600px;margin:2em auto 2em auto;background:#fff;padding:2em;border-radius:10px;box-shadow:0 2px 14px rgba(30,30,45,0.08);">
+<div class="container contact-box">
   <h1>Contact Me</h1>
   <p>
-    Interested in working together, booking a survey, or requesting a sample report? Get in touch below or email <b>jack.curry@echosight.co.uk</b> directly.
+    Interested in working together, booking a survey, or requesting a sample report? Get in touch below or email <strong>jack.curry@echosight.co.uk</strong> directly.
   </p>
-  <form method="post" action="mailto:jack.curry@echosight.co.uk" enctype="text/plain" style="display:flex;flex-direction:column;gap:1em;">
+  <form method="post" action="mailto:jack.curry@echosight.co.uk" enctype="text/plain" class="form-flex">
     <label for="name">Your Name:</label>
-    <input type="text" name="name" id="name" required style="padding:0.7em; border-radius:5px; border:1px solid #bbb;">
+    <input type="text" name="name" id="name" required class="input-field">
     <label for="email">Your Email:</label>
-    <input type="email" name="email" id="email" required style="padding:0.7em; border-radius:5px; border:1px solid #bbb;">
+    <input type="email" name="email" id="email" required class="input-field">
     <label for="message">Message:</label>
-    <textarea name="message" id="message" rows="6" required style="padding:0.7em; border-radius:5px; border:1px solid #bbb;"></textarea>
-    <button type="submit" class="cta-btn" style="width:150px;">Send</button>
+    <textarea name="message" id="message" rows="6" required class="input-field"></textarea>
+    <button type="submit" class="cta-btn btn-narrow">Send</button>
   </form>
-  <div style="margin-top:2em;">
-    <b>Echosight</b><br>
+  <div class="mt-2">
+    <strong>Echosight</strong><br>
     Newbury, Berkshire<br>
     <a href="mailto:jack.curry@echosight.co.uk">jack.curry@echosight.co.uk</a><br>
     <a href="https://www.instagram.com/echosight.uk/" target="_blank">Instagram</a>
   </div>
 </div>
-<footer style="text-align:center;padding:1em 0;color:#aaa;">
+<footer class="site-footer">
   &copy; 2025 Echosight by Jack Curry.
   <script src="assets/js/nav.js"></script>
 </footer>
