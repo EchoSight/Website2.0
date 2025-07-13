@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Echosight: Thermal Bat Survey Support for Consultancies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Arial, sans-serif; 
+      background: #f8f9fa; 
+      margin: 0; 
+      padding-top: 64px;
+    }
+    .hero-video { position: relative; width: 100%; height: 450px; overflow: hidden; background: #222; }
+    .hero-video video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85);}
+    .hero-overlay {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(25, 26, 32, 0.5); display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff;
+    }
+    .cta-btn { background: #39c5bb; color: #fff; padding: 1em 2em; border: none; border-radius: 6px; font-size: 1.2em; margin-top: 1em; cursor: pointer;}
+    .cta-btn:hover { background: #27a597; }
+
+    .container {
+      max-width: 1000px;
+      padding: 0 1.2em;
+    }
+    .section { margin: 2em 0; }
+
+    /* Feature Cards Section */
+    .feature-cards {
+      display: flex;
+      flex-direction: row;
+      gap: 2em;
+      justify-content: center;
+      margin: 0;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+      padding: 2em 2em 2.2em 2em;
+      max-width: 340px;
+      min-width: 240px;
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 320px;
+      transition: box-shadow 0.16s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 8px 32px rgba(57,197,187,0.13);
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.6em;
+      font-size: 1.32em;
+      color: #226c68;
+    }
+    .feature-card p {
+      flex-grow: 1;
+      font-size: 1.03em;
+      color: #222;
+    }
+    .feature-card a {
+      align-self: flex-start;
+      color: #39c5bb;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1.3em;
+      font-size: 1em;
+      transition: color 0.16s;
+    }
+    .feature-card a:hover {
+      color: #27a597;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1050px) {
+      .feature-cards {
+        gap: 1em;
+      }
+      .feature-card {
+        padding: 1.2em 1.2em 1.5em 1.2em;
+      }
+    }
+    @media (max-width: 900px) {
+      .feature-cards {
+        flex-direction: column;
+        gap: 1.6em;
+      }
+      .feature-card {
+        max-width: 100%;
+        min-width: 0;
+      }
+    }
+    .testimonial { background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); padding: 1.5em; margin-top: 2em;}
+    .pricing { background: #e8f7f6; border-radius: 10px; padding: 2em; }
+    .about-row { display: flex; gap: 2em; align-items: center;}
+    .about-img { width: 160px; border-radius: 50%; }
+    @media (max-width: 850px) {
+      .about-row { flex-direction: column; gap: 1em;}
+      .about-img { width: 100%; max-width: 350px;}
+    }
+    /* "See the Difference" cards responsive fix */
+    .see-diff-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      justify-content: center;
+    }
+    .see-diff-cards > div {
+      flex: 1 1 280px;
+      max-width: 350px;
+      min-width: 220px;
+    }
+    @media (max-width: 900px) {
+      .see-diff-cards { flex-direction: column; gap: 1.2em; }
+      .see-diff-cards > div { max-width: 100%; }
+    }
+  </style>
+<body>
+
+<!-- NAVIGATION (BURGER MENU WITH LOGO) -->
+<style>
+  .nav-bar { 
+    background: #1b2124; 
+    color: #fff; 
+    padding: 0.8em 0; 
+    position: fixed;    
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .nav-bar .nav-content { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .nav-bar .logo-area { display: flex; align-items: center; gap: 12px; }
+  .nav-bar .logo-img { width: 38px; height: 38px; object-fit: contain; }
+  .nav-bar .logo-text { font-size: 1.4em; font-weight: bold; letter-spacing: 1px; color: #fff; text-decoration: none; }
+  .nav-bar .menu-links { display: flex; gap: 2em; }
+  .nav-bar a { color: #fff; text-decoration: none; font-weight: 500; }
+  .nav-bar .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .nav-bar .burger span { display: block; width: 26px; height: 3px; background: #39c5bb; border-radius: 2px; }
+  @media (max-width: 800px) {
+    .nav-bar .menu-links { display: none; position: absolute; right: 0; top: 100%; background: #232b2f; flex-direction: column; width: 100%; padding: 1em 0; z-index: 100; }
+    .nav-bar .menu-links.open { display: flex; }
+    .nav-bar .burger { display: flex; }
+    .nav-bar .logo-area { gap: 10px; }
+    .nav-bar .logo-img { width: 32px; height: 32px; }
+    .nav-bar .logo-text { font-size: 1.12em; }
+  }
+</style>
+<nav class="nav-bar">
+  <div class="nav-content">
+    <span class="logo-area">
+      <img src="images/Echosight-logo.svg" alt="Echosight Logo" class="logo-img">
+      <a class="logo-text" href="index.html">Echosight</a>
+    </span>
+    <div class="menu-links" id="mainMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="burger" id="burgerBtn" aria-label="Open menu" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mainMenu = document.getElementById('mainMenu');
+  burgerBtn.onclick = () => mainMenu.classList.toggle('open');
+  burgerBtn.onkeydown = e => { if (e.key === 'Enter') mainMenu.classList.toggle('open'); }
+</script>
+
+<!-- Hero Section -->
+<div class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+<h1>High-Sensitivity Bat Surveys for Consultancies</h1>
+    <h3>Thermal imaging. Full-spectrum acoustic logging. Enhanced video analysis.</h3>
+    <p>
+      Supporting ecology consultancies with expert data collection, in-house analysis tools, and consultant-ready reporting.<br>
+      Every survey is comprehensively reviewed—combining human expertise with advanced technology to ensure no bats are missed.
+    </p>
+    <a href="contact.html" class="cta-btn">Request a Quote</a>
+  </div>
+</div>
+
+<!-- Feature Cards Section (Contained) -->
+<div class="container" style="background:#e8f7f6;border-radius:14px;padding:2.2em 1.2em 2.8em 1.2em;margin:2em auto 2em auto;box-shadow:0 6px 32px rgba(57,197,187,0.09),0 1.5px 12px rgba(0,0,0,0.07);">
+  <p style="text-align:center;max-width:700px;margin:0 auto 2.5em;">
+    <b>
+      Echosight provides specialist bat survey support for ecology consultancies—offering a comprehensive review service that combines expert fieldwork and human analysis with the latest technology. Every dataset is double-checked to ensure no bats are missed. All surveys use my own high-spec equipment and bespoke tools. Flexible and reliable support, whenever you need it.
+    </b>
+  </p>
+  <div class="feature-cards">
+    <div class="feature-card">
+      <h3>Surveying</h3>
+      <p>
+        On-site dusk and dawn bat surveys delivered by a fully licensed, experienced ecologist. Using advanced thermal imaging and acoustic technology, I provide reliable, high-quality data collection tailored to your project's needs.
+      </p>
+      <a href="services.html#surveying">Learn more about surveying &rarr;</a>
+    </div>
+    <div class="feature-card">
+      <h3>Analysis</h3>
+      <p>
+        All data are reviewed and analysed using Echosight’s bespoke analysis tools and professional expertise. Each survey combines manual interpretation with technology to guarantee robust, trustworthy results and full data traceability.
+      </p>
+      <a href="services.html#analysis">Learn more about analysis &rarr;</a>
+    </div>
+    <div class="feature-card">
+      <h3>Reporting</h3>
+      <p>
+        Receive consultant-ready reports including timestamped figures, interpreted results, and species lists—ready for submission to planning authorities or inclusion in your own deliverables. Fast turnaround and clear presentation are guaranteed.
+      </p>
+      <a href="services.html#reporting">Learn more about reporting &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<!-- See the Difference (Contained) -->
+<div class="container">
+  <h2>See the Difference</h2>
+  <div class="see-diff-cards">
+    <div>
+      <video controls width="100%" style="border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.13);">
+        <source src="assets/videos/emergence-thermal-example.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div>
+      <video controls width="100%" style="border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.13);">
+        <source src="assets/videos/motion-tracker-demo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div>
+      <img src="assets/images/acoustic-analysis.jpg" alt="Acoustic Analysis Screenshot" style="border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.13);width:100%;">
+    </div>
+  </div>
+  <p style="margin-top:1em;font-style:italic;">All bat survey footage and analyses are generated in-house using Echosight’s own equipment and AI workflow.</p>
+</div>
+
+<!-- Pricing/Packages (Contained) -->
+<div class="container pricing">
+  <h2>Transparent Pricing</h2>
+  <p><b>Typical Dusk Emergence Package</b></p>
+  <ul>
+    <li>Thermal, acoustic, and video survey (within 60 miles of Newbury)</li>
+    <li>AI-powered emergence and activity analysis</li>
+    <li>Consultant-ready report with timestamped figures & species interpretation</li>
+    <li>Email/phone follow-up support</li>
+  </ul>
+  <div style="font-size:2em;font-weight:bold; color:#222; margin:1em 0 0.5em;">£395</div>
+  <div>Fixed price. No hidden fees.</div>
+</div>
+
+<!-- About/Trust Section (Contained) -->
+<div class="container">
+  <div class="about-row">
+    <img src="assets/images/jack-headshot.jpg" class="about-img" alt="Jack Curry">
+    <div>
+      <h2>Meet Jack Curry</h2>
+      <p>
+        Founder of Echosight, PhD in Molecular Biology and experienced bat worker.<br>
+        I specialise in supporting consultancies with technical survey delivery, robust data, and expert reporting.<br>
+        My in-house developed AI tracking workflow guarantees results that are clear, reliable, and ready for licensing and mitigation.
+      </p>
+      <p><a href="about.html">More about Jack & Echosight &raquo;</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Why Choose Echosight/Testimonials (Contained) -->
+<div class="container">
+  <h2>Why Choose Echosight?</h2>
+  <ul>
+    <li>Consultancy support, not competition—no direct-to-end-client work</li>
+    <li>Industry-leading equipment for complete emergence and activity records</li>
+    <li>All data fully interpreted and formatted for your own reports</li>
+    <li>Fast turnaround, friendly service, and clear communication</li>
+  </ul>
+  <!-- Placeholder testimonial -->
+  <div class="testimonial">
+    <b>“The quality of data and reporting from Echosight saved us hours on every project. Jack’s technology is a game changer for bat survey delivery.”</b>
+    <br>– Senior Ecologist, [Consultancy Name]
+  </div>
+</div>
+
+<!-- Contact/Booking Section (Contained) -->
+<div class="container">
+  <h2>Ready to Book?</h2>
+  <p>Click below to get in touch, check availability, or request a sample report.</p>
+  <a href="contact.html" class="cta-btn">Contact Me</a>
+</div>
+
+<!-- Footer -->
+<footer style="text-align:center;padding:1em 0;color:#aaa;">
+  &copy; 2025 Echosight by Jack Curry. | <a href="https://www.instagram.com/echosight.uk/" target="_blank">Instagram</a> | <a href="contact.html">Contact</a>
+</footer>
+
+</body>
+</html>

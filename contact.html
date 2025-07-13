@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Echosight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- NAVIGATION (BURGER MENU WITH LOGO) -->
+<style>
+  .nav-bar { 
+    background: #1b2124; 
+    color: #fff; 
+    padding: 0.8em 0; 
+    position: fixed;    /* Fixed to the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .nav-bar .nav-content { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .nav-bar .logo-area { display: flex; align-items: center; gap: 12px; }
+  .nav-bar .logo-img { width: 38px; height: 38px; object-fit: contain; }
+  .nav-bar .logo-text { font-size: 1.4em; font-weight: bold; letter-spacing: 1px; color: #fff; text-decoration: none; }
+  .nav-bar .menu-links { display: flex; gap: 2em; }
+  .nav-bar a { color: #fff; text-decoration: none; font-weight: 500; }
+  .nav-bar .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .nav-bar .burger span { display: block; width: 26px; height: 3px; background: #39c5bb; border-radius: 2px; }
+  @media (max-width: 800px) {
+    .nav-bar .menu-links { display: none; position: absolute; right: 0; top: 100%; background: #232b2f; flex-direction: column; width: 100%; padding: 1em 0; z-index: 100; }
+    .nav-bar .menu-links.open { display: flex; }
+    .nav-bar .burger { display: flex; }
+    .nav-bar .logo-area { gap: 10px; }
+    .nav-bar .logo-img { width: 32px; height: 32px; }
+    .nav-bar .logo-text { font-size: 1.12em; }
+  }
+</style>
+<nav class="nav-bar">
+  <div class="nav-content">
+    <span class="logo-area">
+      <img src="images/Echosight-logo.svg" alt="Echosight Logo" class="logo-img">
+      <a class="logo-text" href="index.html">Echosight</a>
+    </span>
+    <div class="menu-links" id="mainMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="burger" id="burgerBtn" aria-label="Open menu" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mainMenu = document.getElementById('mainMenu');
+  burgerBtn.onclick = () => mainMenu.classList.toggle('open');
+  burgerBtn.onkeydown = e => { if (e.key === 'Enter') mainMenu.classList.toggle('open'); }
+</script>
+
+<div class="container" style="max-width:600px;margin:2em auto 2em auto;background:#fff;padding:2em;border-radius:10px;box-shadow:0 2px 14px rgba(30,30,45,0.08);">
+  <h1>Contact Me</h1>
+  <p>
+    Interested in working together, booking a survey, or requesting a sample report? Get in touch below or email <b>jack.curry@echosight.co.uk</b> directly.
+  </p>
+  <form method="post" action="mailto:jack.curry@echosight.co.uk" enctype="text/plain" style="display:flex;flex-direction:column;gap:1em;">
+    <label for="name">Your Name:</label>
+    <input type="text" name="name" id="name" required style="padding:0.7em; border-radius:5px; border:1px solid #bbb;">
+    <label for="email">Your Email:</label>
+    <input type="email" name="email" id="email" required style="padding:0.7em; border-radius:5px; border:1px solid #bbb;">
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" rows="6" required style="padding:0.7em; border-radius:5px; border:1px solid #bbb;"></textarea>
+    <button type="submit" class="cta-btn" style="width:150px;">Send</button>
+  </form>
+  <div style="margin-top:2em;">
+    <b>Echosight</b><br>
+    Newbury, Berkshire<br>
+    <a href="mailto:jack.curry@echosight.co.uk">jack.curry@echosight.co.uk</a><br>
+    <a href="https://www.instagram.com/echosight.uk/" target="_blank">Instagram</a>
+  </div>
+</div>
+<footer style="text-align:center;padding:1em 0;color:#aaa;">
+  &copy; 2025 Echosight by Jack Curry.
+</footer>
+</body>
+</html>
