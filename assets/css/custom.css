@@ -428,3 +428,13 @@ img {
   font-size: 0.9em;
   color: #555;
 }
+
+/* Special heading style for bottlenecks section */
+.highlight-title {
+  background: linear-gradient(to right, #39c5bb, #226c68);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+}
