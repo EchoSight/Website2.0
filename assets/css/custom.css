@@ -732,12 +732,14 @@ h2, h3 {
 }
 .stacked-list li {
   position: relative;
-  padding-left: 1.5em;
+  padding-left: 2em;
   margin-bottom: 0.7em;
   color: #333;
 }
-.stacked-list li:before {
-  content: "\2022";
+.stacked-list li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f6b8";
   position: absolute;
   left: 0;
   color: #6366f1;
