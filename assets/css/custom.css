@@ -357,6 +357,16 @@ img {
 .mt-1 {
   margin-top: 1em;
 }
+.ml-1 {
+  margin-left: 1em;
+}
+.text-center {
+  text-align: center;
+}
+.inline-left {
+  display: inline-block;
+  text-align: left;
+}
 .services-container {
   max-width: 950px;
   margin: 2em auto;
