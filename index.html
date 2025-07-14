@@ -8,34 +8,36 @@
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="icon" href="images/favicon.ico">
   <meta name="description" content="Specialist bat survey support with thermal imaging and acoustic analysis." />
-  </head>
+</head>
 <body>
+<!-- Skip link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- NAVIGATION (BURGER MENU WITH LOGO) -->
+<!-- NAVIGATION -->
 <header>
-<nav class="nav-bar">
-  <div class="nav-content">
-    <span class="logo-area">
-      <img src="images/Echosight-logo.svg" alt="EchoSight Logo" class="logo-img">
-      <a class="logo-text" href="index.html">EchoSight</a>
-    </span>
-    <div class="menu-links" id="mainMenu">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="surveys.html">Surveys</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
+  <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+    <div class="nav-content">
+      <span class="logo-area">
+        <img src="images/Echosight-logo.svg" alt="EchoSight Logo" class="logo-img">
+        <a class="logo-text" href="index.html">EchoSight</a>
+      </span>
+      <div class="menu-links" id="mainMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="surveys.html">Surveys</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainMenu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainMenu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+  </nav>
 </header>
 
-<main>
+<main id="main-content">
 
 <!-- Hero Section -->
 <section class="hero-video">
@@ -44,98 +46,108 @@
   </video>
   <div class="hero-overlay">
     <div class="hero-text">
-      <h1>EchoSight Field & Analysis Services</h1>
-      <h3>Precision bat surveys and analysis, on demand.</h3>
+      <h1>EchoSight Field &amp; Analysis Services</h1>
+      <h2 class="subtitle">Precision bat surveys and analysis, on demand.</h2>
       <a href="contact.html" class="cta-btn">Book a Consultation</a>
     </div>
   </div>
 </section>
 
-<!-- Feature Cards Section (Contained) -->
+<!-- Feature Cards Section -->
 <section class="container feature-box" id="services">
   <h2 class="highlight-title">Our Services</h2>
   <div class="services-grid">
+    <!-- SERVICE CARD 1 -->
     <article class="service-card">
-      <a href="services.html#on-site-bat-surveys" class="service-media-link">
-      <div class="service-media">
-        <video autoplay muted loop playsinline>
-          <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
-        </video>
-        <h3 class="service-title">On-Site Bat Surveys</h3>
-      </div>
+      <a href="services.html#on-site-bat-surveys" class="service-media-link" aria-label="On-Site Bat Surveys">
+        <div class="service-media">
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline>
+              <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
+            </video>
+            <h3 class="service-title overlay-text">On-Site Bat Surveys</h3>
+          </div>
+        </div>
       </a>
-      <p>Immediate on-site identification with rapid reporting. Can be with either clients or EchoSight’s equipment Pixfra A625P and Batlogger M2</p>
+      <p class="service-desc">Immediate on-site identification with rapid reporting. Available with either client or EchoSight equipment (Pixfra A625P &amp; Batlogger M2).</p>
     </article>
+    <!-- SERVICE CARD 2 -->
     <article class="service-card">
-      <a href="services.html#post-survey-analysis" class="service-media-link">
-      <div class="service-media">
-        <video autoplay muted loop playsinline>
-          <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
-        </video>
-        <h3 class="service-title">Post-Survey Acoustic Analysis</h3>
-      </div>
+      <a href="services.html#post-survey-analysis" class="service-media-link" aria-label="Post-Survey Acoustic Analysis">
+        <div class="service-media">
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline>
+              <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
+            </video>
+            <h3 class="service-title overlay-text">Post-Survey Acoustic Analysis</h3>
+          </div>
+        </div>
       </a>
-      <p>Comprehensive acoustic review for dependable species ID. Can be
-        bundled with a survey or carried out using your recordings.</p>
+      <p class="service-desc">Comprehensive acoustic review for reliable species ID. Can be bundled with a survey or performed using your own recordings.</p>
     </article>
+    <!-- SERVICE CARD 3 -->
     <article class="service-card">
-      <a href="services.html#video-analysis" class="service-media-link">
-      <div class="service-media">
-        <video autoplay muted loop playsinline>
-          <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
-        </video>
-        <h3 class="service-title">Post-Survey Video Emergence &amp; Reentry Analysis</h3>
-      </div>
+      <a href="services.html#video-analysis" class="service-media-link" aria-label="Post-Survey Video Emergence & Re-entry Analysis">
+        <div class="service-media">
+          <div class="video-wrapper">
+            <video autoplay muted loop playsinline>
+              <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
+            </video>
+            <h3 class="service-title overlay-text">Video Emergence &amp; Re-entry Analysis</h3>
+          </div>
+        </div>
       </a>
-      <p>Detailed emergence and re-entry video analysis. Available with our
-        surveys or separately using client footage.</p>
+      <p class="service-desc">Detailed emergence and re-entry video analysis. Available with our surveys or using client-supplied footage.</p>
     </article>
   </div>
   <a href="services.html" class="cta-btn service-btn">Explore Full Service Details</a>
-  <p class="section-note">All bat survey footage and analyses are generated in-house using EchoSight’s own equipment and AI workflow.</p>
+  <p class="section-note">All bat survey footage and analyses are produced in-house using EchoSight’s own equipment and AI workflow.</p>
 </section>
 
-<!-- Why Choose EchoSight/Testimonials (Contained) -->
-<section class="container">
+<!-- Why Choose EchoSight/Testimonials -->
+<section class="container why-echosight">
   <h2 class="highlight-title">Why Partner with EchoSight?</h2>
-  <ul>
+  <ul class="stacked-list">
     <li><strong>Proven Track Record:</strong> Trusted by leading consultancies for high-stakes projects and tight timelines.</li>
     <li><strong>Flexible Integration:</strong> Services designed to fit your team’s needs, scale, and systems.</li>
     <li><strong>Expert-Led:</strong> Direct access to a licensed bat specialist—no handoffs, no lost detail.</li>
     <li><strong>Predictable Turnaround:</strong> Set timelines, guaranteed delivery, and responsive communication.</li>
   </ul>
-  <div class="testimonial">
-    <strong>“EchoSight’s support has doubled our survey capacity and eliminated our post-season reporting backlog. Every deadline met, every report bulletproof.”</strong>
-    <br>&mdash; Director, Regional Ecological Consultancy
-  </div>
+  <blockquote class="testimonial">
+    <p>“EchoSight’s support has doubled our survey capacity and eliminated our post-season reporting backlog. Every deadline met, every report bulletproof.”</p>
+    <cite>&mdash; Director, Regional Ecological Consultancy</cite>
+  </blockquote>
 </section>
 
 <!-- Services Introduction -->
-<div class="container intro-blurb">
-  <p>At EchoSight, we believe that high quality and transparency are non-negotiable.</p>
-  <p>Every service we offer is underpinned by clear, accountable methods and honest, upfront pricing. You’ll always know exactly what you’re getting:</p>
-  <ul class="stacked-list inline-left">
-    <li>Detailed pricing for every service—no hidden fees, no ambiguity.</li>
-    <li>A breakdown of what’s included—from equipment and analysis to reporting and consultation.</li>
-    <li>Clear, guaranteed deliverables—so you know precisely what you’ll receive and when.</li>
+<section class="container intro-blurb">
+  <h2 class="highlight-title">How We Work</h2>
+  <p>At EchoSight, quality and transparency are non-negotiable. Every service is built on clear, accountable methods and upfront pricing—you always know what you’re getting:</p>
+  <ul class="stacked-list">
+    <li>Transparent, detailed pricing—no hidden fees or ambiguity.</li>
+    <li>Full breakdown of what’s included: equipment, analysis, reporting, and consultation.</li>
+    <li>Clear, guaranteed deliverables—know exactly what you’ll receive, and when.</li>
   </ul>
-  <p>We set the standard by making sure every survey, every analysis, and every report is fully scoped, transparently costed, and tailored to your needs. Because in ecology, trust is earned through clarity, quality, and results you can stand behind.</p>
-</div>
+  <p>We set the standard by making every survey, analysis, and report fully scoped, transparently costed, and tailored to your needs. In ecology, trust is earned through clarity, quality, and results you can stand behind.</p>
+</section>
 
-<!-- Contact/Booking Section (Contained) -->
-<section class="container">
+<!-- Contact/Booking Section -->
+<section class="container cta-section">
   <h2 class="highlight-title">Ready to Address Your Bottlenecks?</h2>
-  <p>EchoSight is here to free up your consultants, accelerate your delivery, and keep your projects moving. Contact us today to discuss your next challenge.</p>
-  <a href="contact.html" class="cta-btn">Book a Consultation</a>
-  <a href="contact.html" class="cta-btn ml-1">Contact Us</a>
+  <p>EchoSight frees up your consultants, accelerates delivery, and keeps your projects moving. Contact us today to discuss your next challenge.</p>
+  <div class="cta-buttons">
+    <a href="contact.html" class="cta-btn">Book a Consultation</a>
+    <a href="contact.html" class="cta-btn secondary-btn ml-1">Contact Us</a>
+  </div>
 </section>
 </main>
 
 <!-- Footer -->
 <footer class="site-footer">
-  &copy; 2025 EchoSight by Jack Curry. | <a href="https://www.instagram.com/echosight.uk/" target="_blank">Instagram</a> | <a href="contact.html">Contact</a>
+  &copy; 2025 EchoSight by Jack Curry. |
+  <a href="https://www.instagram.com/echosight.uk/" target="_blank" rel="noopener">Instagram</a> |
+  <a href="contact.html">Contact</a>
 </footer>
-  <script src="assets/js/nav.js"></script>
-
+<script src="assets/js/nav.js"></script>
 </body>
 </html>
