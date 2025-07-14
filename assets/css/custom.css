@@ -877,3 +877,40 @@ blockquote.testimonial cite {
 .site-footer a:hover {
   color: #6366f1;
 }
+
+/* === Testimonial Slider === */
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.testimonial-container {
+  flex: 1;
+  overflow: hidden;
+}
+.testimonial-item {
+  display: none;
+  text-align: center;
+}
+.testimonial-item.active {
+  display: block;
+}
+.testimonial-logo {
+  height: 60px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-logo img {
+  max-height: 100%;
+  width: auto;
+}
+.testimonial-nav {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #6366f1;
+}
