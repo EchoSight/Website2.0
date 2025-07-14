@@ -64,6 +64,18 @@ img {
   background: #27a597;
 }
 
+/* Layout for hero buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.hero-buttons .cta-btn {
+  margin-top: 0;
+}
+
 .container {
   max-width: 1000px;
   padding: 0 1.2em;
