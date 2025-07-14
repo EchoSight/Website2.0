@@ -71,7 +71,7 @@ img {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   padding: 0 1.2em;
 }
 .section {
@@ -214,7 +214,7 @@ img {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .nav-bar .nav-content {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -539,8 +539,8 @@ img {
 /* Service Section Styles */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5em;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   justify-items: stretch;
   grid-auto-rows: 1fr;
 }
@@ -549,8 +549,7 @@ img {
   border-radius: 12px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.09);
   overflow: hidden;
-  max-width: 320px;
-  min-width: 280px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -644,17 +643,17 @@ h2, h3 {
 
 /* === Container & Layout === */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
 /* === Service Cards Section === */
 .services-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  justify-content: center;
+  justify-items: stretch;
   margin-bottom: 2rem;
 }
 .service-card {
@@ -662,8 +661,7 @@ h2, h3 {
   border-radius: 1.5rem;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   overflow: hidden;
-  flex: 1 1 330px;
-  max-width: 360px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -696,9 +694,9 @@ h2, h3 {
 }
 .service-title.overlay-text {
   position: absolute;
-  bottom: 1.2rem;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background: rgba(0,0,0,0.68);
   color: #fff;
   padding: 0.6rem 1.5rem;
