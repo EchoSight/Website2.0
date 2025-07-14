@@ -328,6 +328,29 @@ img {
   margin: 2em auto;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
+.tracker-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2em;
+  margin: 2em auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.tracker-box ul {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+.video-demo {
+  text-align: center;
+  margin: 2em auto;
+}
+.video-demo video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
 .contact-box {
   max-width: 600px;
   margin: 2em auto;
