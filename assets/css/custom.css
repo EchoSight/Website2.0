@@ -40,7 +40,14 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #fff;
+}
+
+.hero-overlay h1,
+.hero-overlay h3 {
+  font-weight: 300;
+  color: #f7f7f7;
 }
 
 .cta-btn {
