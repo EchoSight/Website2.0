@@ -440,20 +440,25 @@ img {
 }
 
 /* Bottlenecks layout helpers */
-.bottlenecks > div::after {
-  content: "";
+.bottleneck-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.bottleneck-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.bottleneck-item img {
   display: block;
-  clear: both;
+  width: 100%;
+  height: auto;
 }
 
-.left {
-  float: left;
-  margin-right: 1em;
-}
-
-.right {
-  float: right;
-  margin-left: 1em;
+.bottleneck-img {
+  flex-shrink: 0;
 }
 
 .small-width {
@@ -472,4 +477,15 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+@media (max-width: 600px) {
+  .bottleneck-item,
+  .bottleneck-item:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bottleneck-img {
+    margin: 0 0 1em 0;
+  }
 }
