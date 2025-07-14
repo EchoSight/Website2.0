@@ -50,6 +50,12 @@ img {
   color: #f7f7f7;
 }
 
+.hero-text {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
 .cta-btn {
   background: #39c5bb;
   color: #fff;
