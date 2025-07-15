@@ -1,4 +1,4 @@
-// Simple testimonial slider
+// Testimonial slider with fade transition
 window.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelectorAll('.testimonial-item');
   const prevBtn = document.querySelector('.testimonial-nav.prev');
