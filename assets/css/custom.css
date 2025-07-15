@@ -887,14 +887,24 @@ blockquote.testimonial cite {
 }
 .testimonial-container {
   flex: 1;
+  position: relative;
   overflow: hidden;
+  min-height: 180px;
 }
 .testimonial-item {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
   text-align: center;
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: none;
 }
 .testimonial-item.active {
-  display: block;
+  opacity: 1;
+  position: relative;
+  pointer-events: auto;
 }
 .testimonial-logo {
   height: 60px;
@@ -910,7 +920,7 @@ blockquote.testimonial cite {
 .testimonial-nav {
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   color: #6366f1;
 }
