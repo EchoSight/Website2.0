@@ -67,6 +67,28 @@
         </div>
       </a>
       <p class="service-desc">Standard and premium packages, with or without your own equipment. Immediate on-site identification, professional field notes, and rapid reporting.</p>
+      <button class="workflow-toggle" aria-expanded="false" aria-controls="workflow-on-site">Show Workflow</button>
+      <div class="service-workflow" id="workflow-on-site" hidden>
+        <h4>How it Works:</h4>
+        <ol>
+          <li><strong>Scheduling:</strong> You pick the date, we handle logistics. (Your kit or ours? Your call.)</li>
+          <li><strong>Arrival &amp; Setup:</strong> EchoSight team arrives 30 minutes early—prepped, loaded, ready to roll.</li>
+          <li><strong>Survey:</strong> Phase 2 bat emergence survey (up to 2 hours on-site; extra time £35/hr).
+            <ul>
+              <li>Live acoustic ID as events unfold—real-time expertise, not guesswork.</li>
+              <li>Professional behavioural notes and sharp observations logged throughout.</li>
+            </ul>
+          </li>
+          <li><strong>Summary:</strong> Immediate written summary before we leave—no waiting, no wondering.</li>
+          <li><strong>Data Handover:</strong>
+            <ul>
+              <li>Using your equipment? We'll hand over notes and results on the spot.</li>
+              <li>Using EchoSight gear? High-res files via secure OneDrive link—usually same-day.</li>
+            </ul>
+          </li>
+          <li><strong>Upgrades:</strong> Opted for post-survey analysis? See below for your next steps.</li>
+        </ol>
+      </div>
       <a href="pricing.html#on-site-packages">View pricing for this service</a>
       <a href="resources.html" class="mt-1">See example outputs</a>
     </article>
@@ -83,6 +105,18 @@
         </div>
       </a>
       <p class="service-desc">Full-spectrum acoustic and thermal review. Utilising EchoSight’s advanced tracking software and expert review for reliable species ID and activity mapping.</p>
+      <button class="workflow-toggle" aria-expanded="false" aria-controls="workflow-post">Show Workflow</button>
+      <div class="service-workflow" id="workflow-post" hidden>
+        <h4>How it Works:</h4>
+        <ol>
+          <li><strong>Secure Upload:</strong> You or EchoSight upload recordings to our cloud portal.</li>
+          <li><strong>Automated Screening:</strong> EchoSight Tracker filters every clip—cuts the noise, keeps the bats.</li>
+          <li><strong>Expert Review:</strong> Licensed ecologist inspects, annotates, and validates every event.</li>
+          <li><strong>Mapping &amp; ID:</strong> Species ID, emergence/entry mapping, flight paths—ready for reports or further review.</li>
+          <li><strong>Delivery:</strong> Annotated videos, stills, logs, and concise summary—all via secure download.</li>
+          <li><strong>Follow-up:</strong> Optional consultation or further analysis—because we don’t just drop files and run.</li>
+        </ol>
+      </div>
       <a href="pricing.html#premium-add-ons">View pricing for this service</a>
       <a href="resources.html" class="mt-1">See example outputs</a>
     </article>
@@ -99,6 +133,16 @@
         </div>
       </a>
       <p class="service-desc">Send us your field data—get independent, defensible analysis and integrated reporting.</p>
+      <button class="workflow-toggle" aria-expanded="false" aria-controls="workflow-remote">Show Workflow</button>
+      <div class="service-workflow" id="workflow-remote" hidden>
+        <h4>How it Works:</h4>
+        <ol>
+          <li><strong>You Upload:</strong> Field recordings, notes, site data—drop it in our secure portal.</li>
+          <li><strong>We Analyse:</strong> EchoSight Tracker + expert review; rapid, independent, defensible results.</li>
+          <li><strong>Report Delivered:</strong> All findings, notes, and mapped activity—integrated and ready to use.</li>
+          <li><strong>Support:</strong> Got questions? We’re on call for follow-ups and clarifications. No vanishing acts.</li>
+        </ol>
+      </div>
       <a href="pricing.html#remote-analysis-services">View pricing for this service</a>
       <a href="resources.html" class="mt-1">See example outputs</a>
     </article>
@@ -115,6 +159,16 @@
         </div>
       </a>
       <p class="service-desc">Custom packages for large-scale, multi-phase, or research-driven projects. Designed to slot seamlessly into your workflow.</p>
+      <button class="workflow-toggle" aria-expanded="false" aria-controls="workflow-bespoke">Show Workflow</button>
+      <div class="service-workflow" id="workflow-bespoke" hidden>
+        <h4>How it Works:</h4>
+        <ol>
+          <li><strong>Discovery:</strong> We scope your requirements—field, lab, software, whatever you need.</li>
+          <li><strong>Proposal:</strong> You get a clear plan and costed workflow—no surprises, no gotchas.</li>
+          <li><strong>Build &amp; Deliver:</strong> We integrate with your team, kit, and schedule. No friction, no faff.</li>
+          <li><strong>Results:</strong> Custom outputs, seamless delivery, ongoing optimisation if you want it.</li>
+        </ol>
+      </div>
       <a href="pricing.html#bespoke">View pricing for this service</a>
       <a href="resources.html" class="mt-1">See example outputs</a>
     </article>
@@ -175,6 +229,18 @@
     <a href="contact.html" class="cta-btn ml-1">Contact EchoSight</a>
   </div>
 </section>
+  <!-- JS for Workflow Toggle -->
+  <script>
+    document.querySelectorAll('.workflow-toggle').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const workflow = document.getElementById(this.getAttribute('aria-controls'));
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        workflow.hidden = expanded;
+        this.setAttribute('aria-expanded', (!expanded).toString());
+        this.textContent = expanded ? 'Show Workflow' : 'Hide Workflow';
+      });
+    });
+  </script>
 </main>
 <footer class="site-footer">
   &copy; 2025 EchoSight by Jack Curry. | <a href="https://www.instagram.com/echosight.uk/" target="_blank">Instagram</a> | <a href="contact.html">Contact</a>

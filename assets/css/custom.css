@@ -938,3 +938,78 @@ blockquote.testimonial cite {
   font-size: 2rem;
   color: #6366f1;
 }
+
+/* ---- Service Workflow Styles ---- */
+.service-workflow {
+  background: #181e2b;
+  color: #f8f8fa;
+  border-left: 4px solid #53f2c1;
+  padding: 1.2em 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px 0 rgba(80, 170, 160, 0.09);
+  font-size: 1.03em;
+  transition: all 0.3s cubic-bezier(.21,1.02,.73,1);
+}
+
+.service-workflow h4 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.7em;
+  letter-spacing: 0.02em;
+}
+
+.service-workflow ol {
+  margin: 0 0 0 1.2em;
+  padding: 0;
+  counter-reset: workflow;
+}
+
+.service-workflow ol > li {
+  margin-bottom: 0.7em;
+  font-weight: 500;
+}
+
+.service-workflow ol ul {
+  margin-top: 0.3em;
+  margin-left: 1.2em;
+  font-weight: 400;
+  color: #aafbe9;
+  font-size: 0.97em;
+}
+
+.workflow-toggle {
+  display: inline-block;
+  background: #53f2c1;
+  color: #181e2b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.5em 1.2em;
+  margin: 0.7em 0 0.2em 0;
+  box-shadow: 0 3px 16px 0 rgba(85, 242, 193, 0.14);
+  cursor: pointer;
+  transition: background 0.19s, color 0.19s;
+}
+
+.workflow-toggle:hover,
+.workflow-toggle:focus {
+  background: #181e2b;
+  color: #53f2c1;
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  .service-workflow {
+    font-size: 0.98em;
+    padding: 0.8em 1em;
+    border-left-width: 3px;
+  }
+  .workflow-toggle {
+    width: 100%;
+    padding: 0.6em 0.9em;
+    font-size: 1em;
+  }
+}
