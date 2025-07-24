@@ -149,7 +149,7 @@ img {
 
 .testimonial {
   background: #fff;
-  border-radius: 8px;
+  border-radius: 2em;
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   padding: 1.5em;
   margin-top: 2em;
@@ -354,7 +354,7 @@ img {
 .video-demo video {
   width: 100%;
   max-width: 800px;
-  border-radius: 8px;
+  border-radius: 2em;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 .contact-box {
@@ -942,14 +942,14 @@ blockquote.testimonial cite {
 
 /* ---- Service Workflow Styles ---- */
 .service-workflow {
-  background: #181e2b;
-  color: #f8f8fa;
-  border-left: 4px solid #53f2c1;
+  background: #f4f6ff;
+  color: #2a2a3a;
+  border-left: 5px solid #6366f1;
   padding: 1.2em 1.5em;
   margin-top: 1em;
   margin-bottom: 1em;
   border-radius: 12px;
-  box-shadow: 0 6px 24px 0 rgba(80, 170, 160, 0.09);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
   font-size: 1.03em;
   transition: all 0.3s cubic-bezier(.21,1.02,.73,1);
 }
@@ -976,29 +976,29 @@ blockquote.testimonial cite {
   margin-top: 0.3em;
   margin-left: 1.2em;
   font-weight: 400;
-  color: #aafbe9;
+  color: #6366f1;
   font-size: 0.97em;
 }
 
 .workflow-toggle {
   display: inline-block;
-  background: #53f2c1;
-  color: #181e2b;
+  background: linear-gradient(90deg, #6366f1 65%, #818cf8 100%);
+  color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 2em;
   font-size: 1em;
   font-weight: 600;
   padding: 0.5em 1.2em;
   margin: 0.7em 0 0.2em 0;
-  box-shadow: 0 3px 16px 0 rgba(85, 242, 193, 0.14);
+  box-shadow: 0 2px 14px rgba(99,102,241,0.11);
   cursor: pointer;
   transition: background 0.19s, color 0.19s;
 }
 
 .workflow-toggle:hover,
 .workflow-toggle:focus {
-  background: #181e2b;
-  color: #53f2c1;
+  background: linear-gradient(90deg, #6366f1 50%, #4338ca 100%);
+  color: #fff;
   outline: none;
 }
 
