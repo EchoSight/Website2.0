@@ -1033,3 +1033,15 @@ blockquote.testimonial cite {
     font-size: 1em;
   }
 }
+
+/* Equipment icon card */
+.equipment-icons .icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+}
+.equipment-icons i {
+  color: #39c5bb;
+}
