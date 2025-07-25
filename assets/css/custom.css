@@ -357,6 +357,25 @@ img {
   border-radius: 2em;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
+
+/* Layout for multiple demo videos */
+.video-demo-row {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2em auto;
+}
+.video-demo-row .video-demo {
+  flex: 1 1 45%;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .video-demo-row {
+    flex-direction: column;
+  }
+}
 .contact-box {
   max-width: 600px;
   margin: 2em auto;
