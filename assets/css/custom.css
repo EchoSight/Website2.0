@@ -71,7 +71,7 @@ img {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   padding: 0 1.2em;
 }
 .section {
@@ -665,7 +665,7 @@ h2, h3 {
 
 /* === Container & Layout === */
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
