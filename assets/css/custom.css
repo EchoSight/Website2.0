@@ -914,6 +914,18 @@ blockquote.testimonial cite {
   color: #6366f1;
 }
 
+.footer-nav {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-contact {
+  margin-bottom: 0.5rem;
+}
+
 /* === Testimonial Slider === */
 .testimonial-slider {
   display: flex;
