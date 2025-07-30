@@ -1048,36 +1048,3 @@ blockquote.testimonial cite {
 .equipment-icons i {
   color: #39c5bb;
 }
-
-/* --- Index Specialist Services --- */
-.intro-text {
-  font-size: 1.15rem;
-  margin-bottom: 1rem;
-}
-.service-content {
-  padding: 1rem 1.2rem 1.4rem;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.service-highlights {
-  list-style: none;
-  margin: 0 0 1rem 0;
-  padding: 0;
-}
-.service-highlights li {
-  margin-bottom: 0.4rem;
-}
-.service-cta {
-  margin-top: auto;
-  font-weight: 600;
-  color: #6366f1;
-  text-decoration: underline;
-}
-.service-video,
-.service-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
