@@ -225,13 +225,23 @@ img {
   align-items: center;
   gap: 12px;
 }
-.nav-bar .logo-img {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-}
-.nav-bar .logo-text {
-  font-size: 1.4em;
+  .nav-bar .logo-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+  }
+  .nav-bar .logo-text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .nav-bar .logo-subtext {
+    font-size: 0.65em;
+    color: #fff;
+    margin-bottom: -2px;
+  }
+  .nav-bar .logo-text {
+    font-size: 1.4em;
   font-weight: bold;
   letter-spacing: 1px;
   color: #fff;
@@ -259,7 +269,7 @@ img {
   background: #39c5bb;
   border-radius: 2px;
 }
-@media (max-width: 800px) {
+  @media (max-width: 800px) {
   .nav-bar .menu-links {
     display: none;
     position: absolute;
@@ -280,14 +290,17 @@ img {
   .nav-bar .logo-area {
     gap: 10px;
   }
-  .nav-bar .logo-img {
-    width: 32px;
-    height: 32px;
+    .nav-bar .logo-img {
+      width: 32px;
+      height: 32px;
+    }
+    .nav-bar .logo-text {
+      font-size: 1.12em;
+    }
+    .nav-bar .logo-subtext {
+      font-size: 0.55em;
+    }
   }
-  .nav-bar .logo-text {
-    font-size: 1.12em;
-  }
-}
 /* Utility classes extracted from inline styles */
 .feature-box {
   background: #e8f7f6;
