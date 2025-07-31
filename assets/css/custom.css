@@ -973,6 +973,22 @@ blockquote.testimonial cite {
   color: #6366f1;
 }
 
+@media (max-width: 600px) {
+  .testimonial-slider {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-container {
+    min-height: 220px;
+    padding: 0 1rem;
+  }
+
+  .testimonial-nav {
+    margin-top: 0.5rem;
+  }
+}
+
 /* Services Page Stacked Layout */
 .services-stack {
   display: flex;
