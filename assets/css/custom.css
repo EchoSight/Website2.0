@@ -321,14 +321,6 @@ img {
   max-width: 700px;
   margin: 0 auto 2.5em;
 }
-
-.difference-section {
-  margin: 0 auto 3rem;
-}
-
-.difference-section .intro-blurb {
-  margin-bottom: 2.2rem;
-}
 .difference-list {
   display: flex;
   flex-wrap: wrap;
@@ -1028,7 +1020,6 @@ blockquote.testimonial cite {
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-  justify-self: center;
 }
 
 .testimonial-dot {
