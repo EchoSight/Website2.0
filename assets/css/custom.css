@@ -350,6 +350,34 @@ video {
   padding: 3.5rem 0;
 }
 
+.section--raised {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f8f7 100%);
+  position: relative;
+}
+
+.section--tint {
+  background: linear-gradient(135deg, rgba(57, 197, 187, 0.15) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.section--slate {
+  background: linear-gradient(150deg, #0f1f2d 0%, #1f2a36 100%);
+  color: #f5f7fa;
+}
+
+.section--slate .section-header h2 {
+  color: #ffffff;
+}
+
+.section--slate .section-header p {
+  color: rgba(245, 247, 250, 0.78);
+}
+
+.section--framed {
+  background: #ffffff;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
 .section-header {
   margin-bottom: 2rem;
 }
@@ -414,7 +442,7 @@ video {
   gap: 1.5rem;
 }
 
-.card {
+.card { 
   background: #ffffff;
   background: var(--color-surface);
   border-radius: 18px;
@@ -490,6 +518,33 @@ video {
   box-shadow: none;
   border: 1px solid #d9e2ec;
   border: 1px solid var(--color-border);
+}
+
+.card--frosted {
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+
+.card-grid--compact .card.card--frosted {
+  padding: 1.75rem;
+  border: none;
+  box-shadow: 0 18px 40px rgba(19, 55, 86, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.section--slate .card-grid--compact .card.card--frosted {
+  background: rgba(17, 37, 52, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 22px 50px rgba(6, 19, 32, 0.65);
+}
+
+.section--slate .card.card--frosted h3 {
+  color: #ffffff;
+}
+
+.section--slate .card.card--frosted p {
+  color: rgba(245, 247, 250, 0.9);
 }
 
 .trust-list {
@@ -571,6 +626,27 @@ video {
 
 .process-steps--horizontal {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.process-steps--panel {
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(57, 197, 187, 0.12), rgba(255, 255, 255, 0.95));
+  box-shadow: 0 18px 45px rgba(19, 55, 86, 0.12);
+  gap: 1.5rem;
+}
+
+.process-steps--panel li {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  box-shadow: none;
+  padding: 0.85rem 1rem;
+}
+
+.process-steps--panel li strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--color-primary-dark);
 }
 
 .stacked-list {
