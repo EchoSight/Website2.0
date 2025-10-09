@@ -2,101 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About | EchoSight</title>
+  <title>About EchoSight</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about EchoSight and Jack Curry's expertise in ecological surveys, data workflows, and reporting." />
+  <meta property="og:title" content="About EchoSight">
+  <meta property="og:description" content="Discover EchoSight's experience delivering bat surveys, analysis, and workflow optimisation for consultancies." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="icon" href="images/favicon.ico">
-  <meta name="description" content="Learn about EchoSight and Jack Curry's expertise in thermal imaging, acoustic analysis, project and operations management, and workflow improvement for ecological surveys." />
 </head>
-<!-- NAVIGATION (BURGER MENU) -->
-<!-- NAVIGATION (BURGER MENU WITH LOGO) -->
-<header>
-<nav class="nav-bar">
-  <div class="nav-content">
-    <span class="logo-area">
-      <img src="images/Echosight-logo.svg" alt="EchoSight Logo" class="logo-img">
-      <span class="logo-text-container">
-        <span class="logo-subtext">Jack Curry</span>
-        <a class="logo-text" href="index.html">EchoSight</a>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-brand" aria-label="EchoSight home">
+      <img src="images/Echosight-logo.svg" alt="EchoSight" class="site-brand__logo" loading="lazy">
+      <span class="site-brand__text">
+        <span class="site-brand__name">EchoSight</span>
+        <span class="site-brand__tagline">Ecology partners to consultancies</span>
       </span>
-    </span>
-    <div class="menu-links" id="mainMenu">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Services</a>
-      <a href="about.html">Meet the Team</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainMenu">
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav">
       <span></span><span></span><span></span>
     </button>
-  </div>
-</nav>
-</header>
-
-<main>
-<!-- Hero Section -->
-<section class="hero-video">
-  <video autoplay muted loop playsinline>
-    <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay">
-    <div class="hero-text">
-      <h2>EchoSight Field & Analysis Services</h2>
-      <h3>Expertise and transparency from Jack Curry.</h3>
-      <div class="text-center mt-1"></div>
-      <a href="contact.html" class="cta-btn">Book a Consultation</a>
-    </div>
-  </div>
-</section>
-
-<!-- About/Trust Section (Contained) -->
-<div class="container section about-box">
-  <h1>About EchoSight</h1>
-  <div class="about-row">
-    <img src="images/header.jpg" class="about-img" alt="Jack Curry">
-    <div>
-      <h2 class="highlight-title">Meet Jack Curry</h2>
-      <p>
-        Hi, I'm Jack Curry – an experienced bat ecologist and evidence-focused consultant based in Newbury. With over a decade’s experience working in UK ecology, I specialise in delivering high-sensitivity bat surveys and robust, traceable reporting for ecological consultancies.
-      </p>
-        <p>
-          My background combines protected species survey work, digital data collection, project and operations management, and workflow design. By focusing on workflow improvement and identifying the best tools for the job, I’ve developed specialist bat survey methodologies that pair hands-on expertise with powerful analysis tools – ensuring no bats are missed and every result is traceable, audit-ready, and easy for clients to use.
-        </p>
-      <ul>
-        <li><strong>Bat survey specialist</strong> with advanced thermal and acoustic techniques</li>
-        <li><strong>Evidence-based</strong> approach: transparent, reproducible, and client-focused</li>
-        <li><strong>Support for consultancies only</strong> – never in competition</li>
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+      <ul class="primary-nav__list">
+        <li class="primary-nav__item"><a class="primary-nav__link" href="index.html">Home</a></li>
+        <li class="primary-nav__item primary-nav__item--has-children">
+          <a class="primary-nav__link" href="protected-species/index.html">Protected species surveys</a>
+          <button class="nav-dropdown-toggle" type="button" aria-label="Toggle protected species menu" aria-haspopup="menu" aria-expanded="false" aria-controls="protectedSpeciesMenu"></button>
+          <ul class="primary-nav__submenu" id="protectedSpeciesMenu" role="menu">
+            <li role="none"><a role="menuitem" href="protected-species/bats/index.html">Bat surveys</a></li>
+            <li role="none"><a role="menuitem" href="protected-species/reptiles/index.html">Reptile surveys</a></li>
+            <li role="none"><a role="menuitem" href="protected-species/gcn/index.html">Great crested newt surveys</a></li>
+          </ul>
+        </li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="data-services/index.html">Data services</a></li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="project-planning/index.html">Project planning</a></li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="report-writing/index.html">Report writing</a></li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="other/index.html">Other</a></li>
       </ul>
-
-    </div>
+    </nav>
+    <a class="header-cta" href="contact.html">Get a quote</a>
   </div>
-</div>
+</header>
+<main id="main-content">
+  <section class="page-hero page-hero--overlay">
+    <div class="page-hero__media" aria-hidden="true">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="page-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">About</li>
+        </ol>
+      </nav>
+      <h1>Expert ecological support led by Jack Curry.</h1>
+      <p>EchoSight exists to strengthen ecological consultancies with specialist bat survey capability, robust analysis, and operations expertise.</p>
+      <div class="button-group">
+        <a class="cta-btn" href="contact.html">Book a call</a>
+        <a class="cta-btn secondary-btn" href="pricing.html">View pricing</a>
+      </div>
+    </div>
+  </section>
 
-<!-- About Video Section -->
-<div class="container about-video">
-  <h2 class="highlight-title">Watch Jack in Action</h2>
-  <video controls class="media-rounded">
-    <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+  <section class="section container" aria-labelledby="about-story">
+    <div class="section-header">
+      <h2 id="about-story">Meet Jack Curry</h2>
+      <p>Experienced bat ecologist and workflow specialist.</p>
+    </div>
+    <div class="about-row">
+      <img src="images/header.jpg" class="about-img" alt="Jack Curry using survey equipment" loading="lazy">
+      <div>
+        <p>Hi, I'm Jack Curry – an experienced bat ecologist and evidence-focused consultant based in Newbury. With over a decade’s experience working in UK ecology, I specialise in delivering high-sensitivity bat surveys and robust, traceable reporting for ecological consultancies.</p>
+        <p>My background combines protected species survey work, digital data collection, project and operations management, and workflow design. By focusing on workflow improvement and identifying the best tools for the job, I’ve developed specialist bat survey methodologies that pair hands-on expertise with powerful analysis tools – ensuring no bats are missed and every result is traceable, audit-ready, and easy for clients to use.</p>
+        <ul class="stacked-list">
+          <li><strong>Bat survey specialist:</strong> Advanced thermal and acoustic techniques tailored to complex sites.</li>
+          <li><strong>Evidence-based delivery:</strong> Transparent, reproducible reporting with defensible data trails.</li>
+          <li><strong>Consultancy partner:</strong> We support your team without competing for clients.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
+  <section class="section container" aria-labelledby="about-approach">
+    <div class="section-header">
+      <h2 id="about-approach">Our approach</h2>
+      <p>Technology-enabled surveys backed by human expertise.</p>
+    </div>
+    <div class="feature-columns__grid">
+      <div>
+        <h3>Thermal &amp; acoustic innovation</h3>
+        <p>Pixfra A625P thermal imaging and Batlogger detectors deliver clarity on emergence, re-entry, and commuting routes.</p>
+      </div>
+      <div>
+        <h3>Data-first mindset</h3>
+        <p>Structured data capture, QA, and reporting workflows make it easy to evidence compliance and respond to consultee queries.</p>
+      </div>
+      <div>
+        <h3>Partnership focused</h3>
+        <p>We slot into your team’s processes, from mobilisation to reporting, so you can scale capacity without friction.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="about-video">
+    <div class="section-header">
+      <h2 id="about-video">See EchoSight in action</h2>
+      <p>Brief insight into our survey workflows.</p>
+    </div>
+    <video controls class="media-rounded">
+      <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section class="section cta-band" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-band__content">
+        <div>
+          <h2 id="cta-heading">Ready to collaborate?</h2>
+          <p>Share your upcoming survey programme and we’ll outline where EchoSight can plug into delivery.</p>
+        </div>
+        <a class="cta-btn" href="contact.html">Get a quote</a>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="site-footer">
-  <nav class="footer-nav" aria-label="Footer">
-    <a href="index.html">Home</a>
-    <a href="pricing.html">Services &amp; Pricing</a>
-    <a href="about.html">About</a>
-    <a href="resources.html">Resources</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <p class="footer-contact">
-    Email: <a href="mailto:jack.curry@echosight.co.uk">jack.curry@echosight.co.uk</a> |
-    <a href="https://www.instagram.com/echosight.uk/" target="_blank" rel="noopener">Instagram</a>
-  </p>
-  <p>&copy; 2025 EchoSight by Jack Curry.</p>
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="images/Echosight-logo.svg" alt="EchoSight" loading="lazy">
+      <p>Specialist ecological consultancy support covering southern England and national remote analysis.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="protected-species/index.html">Protected species surveys</a></li>
+        <li><a href="data-services/index.html">Data services</a></li>
+        <li><a href="project-planning/index.html">Project planning</a></li>
+        <li><a href="report-writing/index.html">Report writing</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="other/index.html">Other</a></li>
+      </ul>
+    </nav>
+    <div class="site-footer__contact">
+      <p>Email: <a href="mailto:jack.curry@echosight.co.uk">jack.curry@echosight.co.uk</a></p>
+      <p>Phone: <a href="tel:+447000000000">[sample] +44 (0)7000 000000</a></p>
+      <p>Based in Newbury • Projects nationwide</p>
+      <p><a href="https://www.instagram.com/echosight.uk/" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+  </div>
+  <div class="site-footer__meta">
+    <p>&copy; 2025 EchoSight. All rights reserved.</p>
+  </div>
 </footer>
 <script src="assets/js/nav.js"></script>
 </body>

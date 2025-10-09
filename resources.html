@@ -4,92 +4,152 @@
   <meta charset="UTF-8">
   <title>Resources | EchoSight</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Download EchoSight resources including sample reports, footage, and practical guidance." />
+  <meta property="og:title" content="Resources | EchoSight">
+  <meta property="og:description" content="Sample outputs and useful documents for ecological consultancies." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="icon" href="images/favicon.ico">
-  <meta name="description" content="Find resources on thermal bat survey techniques, equipment reviews and best practice guidance." />
 </head>
-<!-- NAVIGATION (BURGER MENU) -->
-<!-- NAVIGATION (BURGER MENU WITH LOGO) -->
-<header>
-<nav class="nav-bar">
-  <div class="nav-content">
-    <span class="logo-area">
-      <img src="images/Echosight-logo.svg" alt="EchoSight Logo" class="logo-img">
-      <span class="logo-text-container">
-        <span class="logo-subtext">Jack Curry</span>
-        <a class="logo-text" href="index.html">EchoSight</a>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-brand" aria-label="EchoSight home">
+      <img src="images/Echosight-logo.svg" alt="EchoSight" class="site-brand__logo" loading="lazy">
+      <span class="site-brand__text">
+        <span class="site-brand__name">EchoSight</span>
+        <span class="site-brand__tagline">Ecology partners to consultancies</span>
       </span>
-    </span>
-    <div class="menu-links" id="mainMenu">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Services</a>
-      <a href="about.html">Meet the Team</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainMenu">
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav">
       <span></span><span></span><span></span>
     </button>
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+      <ul class="primary-nav__list">
+        <li class="primary-nav__item"><a class="primary-nav__link" href="index.html">Home</a></li>
+        <li class="primary-nav__item primary-nav__item--has-children">
+          <a class="primary-nav__link" href="protected-species/index.html">Protected species surveys</a>
+          <button class="nav-dropdown-toggle" type="button" aria-label="Toggle protected species menu" aria-haspopup="menu" aria-expanded="false" aria-controls="protectedSpeciesMenu"></button>
+          <ul class="primary-nav__submenu" id="protectedSpeciesMenu" role="menu">
+            <li role="none"><a role="menuitem" href="protected-species/bats/index.html">Bat surveys</a></li>
+            <li role="none"><a role="menuitem" href="protected-species/reptiles/index.html">Reptile surveys</a></li>
+            <li role="none"><a role="menuitem" href="protected-species/gcn/index.html">Great crested newt surveys</a></li>
+          </ul>
+        </li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="data-services/index.html">Data services</a></li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="project-planning/index.html">Project planning</a></li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="report-writing/index.html">Report writing</a></li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="other/index.html">Other</a></li>
+      </ul>
+    </nav>
+    <a class="header-cta" href="contact.html">Get a quote</a>
   </div>
-</nav>
 </header>
-
-<main>
-<!-- Hero Section -->
-<section class="hero-video">
-  <video autoplay muted loop playsinline>
-    <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay">
-    <div class="hero-text">
-      <h2>EchoSight Field & Analysis Services</h2>
-      <h3>Practical guides and sample reports for your team.</h3>
-      <a href="contact.html" class="cta-btn">Book a Consultation</a>
+<main id="main-content">
+  <section class="page-hero page-hero--overlay">
+    <div class="page-hero__media" aria-hidden="true">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
+      </video>
     </div>
-  </div>
-</section>
+    <div class="page-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Resources</li>
+        </ol>
+      </nav>
+      <h1>Resources for ecological consultancies.</h1>
+      <p>Access sample outputs, footage, and useful documents to help your team plan and deliver surveys.</p>
+      <div class="button-group">
+        <a class="cta-btn" href="contact.html">Request sample report</a>
+        <a class="cta-btn secondary-btn" href="assets/Jack-Curry-MSc-BSc-CV.pdf">Download CV</a>
+      </div>
+    </div>
+  </section>
 
-<!-- Resources Section -->
-<div class="container resources-box">
-  <h1>Resources</h1>
-<p>Useful documents and links from EchoSight.</p>
-  <ul class="stacked-list">
-    <li><a href="assets/Jack-Curry-MSc-BSc-CV.pdf" target="_blank">Download Jack Curry's CV (PDF)</a></li>
-    <li><a href="contact.html">Request a Sample Report</a></li>
-  </ul>
+  <section class="section container" aria-labelledby="resource-downloads">
+    <div class="section-header">
+      <h2 id="resource-downloads">Downloads &amp; links</h2>
+      <p>Materials you can use to brief clients or internal teams.</p>
+    </div>
+    <ul class="stacked-list">
+      <li><a href="assets/Jack-Curry-MSc-BSc-CV.pdf">Download Jack Curry's CV (PDF)</a></li>
+      <li><a href="contact.html">Request a tailored sample report</a></li>
+      <li>[sample] Protected species survey preparation checklist</li>
+    </ul>
+  </section>
 
-  <div class="section section-gap">
-    <h2 class="highlight-title">Sample Footage &amp; Reports</h2>
-    <div class="flex-media">
-      <video controls width="340" class="media-rounded">
+  <section class="section container" aria-labelledby="resource-media">
+    <div class="section-header">
+      <h2 id="resource-media">Sample footage</h2>
+      <p>Selected clips showcasing EchoSight Tracker outputs.</p>
+    </div>
+    <div class="media-grid">
+      <video controls class="media-rounded">
         <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <video controls width="340" class="media-rounded">
-        <source src="assets/videos/echosight-hero-placeholder.mp4" type="video/mp4">
+      <video controls class="media-rounded">
+        <source src="assets/videos/Echosight_Motion_Capture.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <img src="images/header.jpg" alt="Sample Report" width="340" class="media-rounded">
+      <img src="images/header.jpg" alt="Sample bat survey report output" class="media-rounded" loading="lazy">
     </div>
-    <p class="mt-1">Interested in a full sample report? <a href="contact.html">Request one here.</a></p>
-  </div>
-</div>
+  </section>
 
+  <section class="section container" aria-labelledby="resource-next">
+    <div class="section-header">
+      <h2 id="resource-next">Need something specific?</h2>
+      <p>Let us know what documentation would help your team.</p>
+    </div>
+    <div class="button-group">
+      <a class="cta-btn" href="contact.html">Send a request</a>
+      <a class="cta-btn secondary-btn" href="other/index.html">Explore more pages</a>
+    </div>
+  </section>
+
+  <section class="section cta-band" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-band__content">
+        <div>
+          <h2 id="cta-heading">Share your resource wish list</h2>
+          <p>We regularly add new guides based on feedback from partner consultancies.</p>
+        </div>
+        <a class="cta-btn" href="contact.html">Get a quote</a>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="site-footer">
-  <nav class="footer-nav" aria-label="Footer">
-    <a href="index.html">Home</a>
-    <a href="pricing.html">Services &amp; Pricing</a>
-    <a href="about.html">About</a>
-    <a href="resources.html">Resources</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <p class="footer-contact">
-    Email: <a href="mailto:jack.curry@echosight.co.uk">jack.curry@echosight.co.uk</a> |
-    <a href="https://www.instagram.com/echosight.uk/" target="_blank" rel="noopener">Instagram</a>
-  </p>
-  <p>&copy; 2025 EchoSight by Jack Curry.</p>
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="images/Echosight-logo.svg" alt="EchoSight" loading="lazy">
+      <p>Specialist ecological consultancy support covering southern England and national remote analysis.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="protected-species/index.html">Protected species surveys</a></li>
+        <li><a href="data-services/index.html">Data services</a></li>
+        <li><a href="project-planning/index.html">Project planning</a></li>
+        <li><a href="report-writing/index.html">Report writing</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="other/index.html">Other</a></li>
+      </ul>
+    </nav>
+    <div class="site-footer__contact">
+      <p>Email: <a href="mailto:jack.curry@echosight.co.uk">jack.curry@echosight.co.uk</a></p>
+      <p>Phone: <a href="tel:+447000000000">[sample] +44 (0)7000 000000</a></p>
+      <p>Based in Newbury • Projects nationwide</p>
+      <p><a href="https://www.instagram.com/echosight.uk/" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+  </div>
+  <div class="site-footer__meta">
+    <p>&copy; 2025 EchoSight. All rights reserved.</p>
+  </div>
 </footer>
 <script src="assets/js/nav.js"></script>
 </body>
