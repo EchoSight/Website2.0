@@ -316,6 +316,7 @@ video {
   font-weight: 600;
   letter-spacing: 0.01em;
   text-shadow: 0 12px 32px rgba(10, 22, 31, 0.45);
+  color: #fff;
 }
 
 .page-hero__content p {
