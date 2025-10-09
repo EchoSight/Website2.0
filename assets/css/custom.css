@@ -605,6 +605,127 @@ video {
   content: '';
 }
 
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.tile {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(57, 197, 187, 0.18);
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 16px 36px rgba(19, 55, 86, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: inherit;
+}
+
+.tile a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tile a:hover,
+.tile a:focus {
+  text-decoration: underline;
+}
+
+.tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.tile:hover,
+.tile:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(19, 55, 86, 0.12);
+}
+
+.tile__eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5f6c7b;
+  color: var(--color-muted);
+}
+
+.tile__headline {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.tile__stat {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.tile__body {
+  margin: 0;
+  color: #374150;
+}
+
+.tile--accent {
+  background: linear-gradient(135deg, rgba(57, 197, 187, 0.92), rgba(39, 165, 151, 0.92));
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 22px 45px rgba(35, 123, 114, 0.35);
+}
+
+.tile--accent .tile__eyebrow,
+.tile--accent .tile__body {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.tile--accent a {
+  color: #ffffff;
+}
+
+.tile--muted {
+  background: rgba(247, 248, 250, 0.92);
+  border: 1px solid rgba(217, 226, 236, 0.85);
+  box-shadow: none;
+}
+
+.tile ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.tile ul li {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .tile__headline {
+    font-size: 1.3rem;
+  }
+
+  .tile__stat {
+    font-size: 1.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .tile::after {
+    transition: none;
+  }
+}
+
 .card-grid--compact .card {
   padding: 1.5rem;
   box-shadow: none;
