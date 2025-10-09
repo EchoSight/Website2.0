@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
   const dropdownMenu = document.getElementById('protectedSpeciesMenu');
   const dropdownItem = dropdownToggle?.closest('.primary-nav__item--has-children');
+  let dropdownCloseTimeout;
 
   const isDesktop = () => window.matchMedia('(min-width: 960px)').matches;
 
@@ -15,16 +16,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeMenu = () => setMenuState(false);
 
+  const clearDropdownCloseTimeout = () => {
+    if (!dropdownCloseTimeout) return;
+    clearTimeout(dropdownCloseTimeout);
+    dropdownCloseTimeout = null;
+  };
+
   const openDropdown = () => {
     if (!dropdownToggle || !dropdownMenu) return;
+    clearDropdownCloseTimeout();
     dropdownToggle.setAttribute('aria-expanded', 'true');
     dropdownMenu.classList.add('primary-nav__submenu--open');
   };
 
   const closeDropdown = () => {
     if (!dropdownToggle || !dropdownMenu) return;
+    clearDropdownCloseTimeout();
     dropdownToggle.setAttribute('aria-expanded', 'false');
     dropdownMenu.classList.remove('primary-nav__submenu--open');
+  };
+
+  const scheduleDropdownClose = () => {
+    clearDropdownCloseTimeout();
+    dropdownCloseTimeout = setTimeout(() => {
+      closeDropdown();
+    }, 250);
   };
 
   if (navToggle && primaryNav) {
@@ -71,13 +87,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const nextTarget = event.relatedTarget;
         if (!nextTarget || !dropdownItem.contains(nextTarget)) {
-          closeDropdown();
+          scheduleDropdownClose();
         }
       });
       dropdownItem.addEventListener('focusin', openDropdown);
       dropdownItem.addEventListener('focusout', (event) => {
         if (!dropdownItem.contains(event.relatedTarget)) {
-          closeDropdown();
+          if (isDesktop()) {
+            scheduleDropdownClose();
+          } else {
+            closeDropdown();
+          }
         }
       });
     }
