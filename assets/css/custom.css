@@ -167,6 +167,7 @@ video {
 .primary-nav__item {
   display: flex;
   align-items: center;
+  gap: 0.35rem;
 }
 
 .primary-nav__link {
@@ -181,13 +182,25 @@ video {
 }
 
 .nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: 0;
-  width: 32px;
-  height: 32px;
-  margin-left: 0.5rem;
-  border-radius: 999px;
+  margin: 0;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 12px;
   position: relative;
+  color: inherit;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown-toggle:focus {
+  background: rgba(57, 197, 187, 0.12);
+  outline: none;
 }
 
 .nav-dropdown-toggle::before,
@@ -196,12 +209,12 @@ video {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 10px;
+  width: 12px;
   height: 2px;
-  background: #1f2a36;
-  background: var(--color-text);
+  background: currentColor;
   transform-origin: center;
   transition: transform 0.2s ease;
+  border-radius: 999px;
 }
 
 .nav-dropdown-toggle::before {
@@ -244,9 +257,10 @@ video {
   background: var(--color-primary);
   color: #fff;
   text-decoration: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 999px;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .header-cta:hover,
@@ -797,6 +811,10 @@ video {
     padding: 0;
   }
 
+  .primary-nav__item {
+    gap: 0.25rem;
+  }
+
   .primary-nav__submenu {
     position: absolute;
     left: 0;
@@ -816,8 +834,44 @@ video {
   }
 
   .nav-dropdown-toggle {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+  }
+
+  .nav-dropdown-toggle::before,
+  .nav-dropdown-toggle::after {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+  }
+
+  .nav-dropdown-toggle::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid currentColor;
+    transform: translate(-50%, -35%);
+    transition: transform 0.2s ease;
+  }
+
+  .nav-dropdown-toggle::after {
+    content: none;
+  }
+
+  .nav-dropdown-toggle[aria-expanded="true"]::before {
+    transform: translate(-50%, -35%) rotate(180deg);
+  }
+
+  .header-cta {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
