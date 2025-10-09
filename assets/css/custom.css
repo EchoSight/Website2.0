@@ -688,6 +688,10 @@ video {
   color: #fff;
 }
 
+.cta-band h2 {
+  color: #fff;
+}
+
 .cta-band__content {
   display: flex;
   align-items: center;
