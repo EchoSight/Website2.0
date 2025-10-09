@@ -66,8 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
           openDropdown();
         }
       });
-      dropdownItem.addEventListener('mouseleave', () => {
-        if (isDesktop()) {
+      dropdownItem.addEventListener('mouseleave', (event) => {
+        if (!isDesktop()) return;
+
+        const nextTarget = event.relatedTarget;
+        if (!nextTarget || !dropdownItem.contains(nextTarget)) {
           closeDropdown();
         }
       });
