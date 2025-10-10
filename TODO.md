@@ -9,3 +9,4 @@
 - [ ] Produce protected species survey preparation checklist asset referenced in `resources.html`.
 - [ ] Confirm tooling/workflow specifics for BTO pipeline compatibility on `data-services/index.html` if proprietary scripts are to be shared.
 - [ ] Review accessibility of new navigation and hero sections with real content/images and adjust contrast/focus styles if required.
+- [ ] Raise follow-up ticket to audit the expanded `assets/css/custom.css` utilities introduced for project-planning layouts and align them with the global design system.
