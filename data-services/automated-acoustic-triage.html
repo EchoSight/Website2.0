@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Automated Acoustic Triage | EchoSight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Automated acoustic triage blends machine learning with ecologist QA to reduce review time and surface priority calls." />
+  <meta property="og:title" content="Automated Acoustic Triage | EchoSight">
+  <meta property="og:description" content="Machine learning filters, expert validation, and reporting dashboards that cut acoustic review time by 60%." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="../index.html" class="site-brand" aria-label="EchoSight home">
+      <img src="../images/Echosight-logo.svg" alt="EchoSight" class="site-brand__logo" loading="lazy">
+      <span class="site-brand__text">
+        <span class="site-brand__name">EchoSight</span>
+        <span class="site-brand__tagline">Your Ecology Partners</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+      <ul class="primary-nav__list">
+        <li class="primary-nav__item primary-nav__item--has-children">
+          <a class="primary-nav__link" href="../protected-species/index.html">Protected species surveys</a>
+          <button class="nav-dropdown-toggle" type="button" aria-label="Toggle protected species menu" aria-haspopup="menu" aria-expanded="false" aria-controls="protectedSpeciesMenu"></button>
+          <ul class="primary-nav__submenu" id="protectedSpeciesMenu" role="menu">
+            <li role="none"><a role="menuitem" href="../protected-species/bats/index.html">Bat surveys</a></li>
+            <li role="none"><a role="menuitem" href="../protected-species/reptiles/index.html">Reptile surveys</a></li>
+            <li role="none"><a role="menuitem" href="../protected-species/gcn/index.html">Great crested newt surveys</a></li>
+          </ul>
+        </li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="index.html" aria-current="page">Data services</a></li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="../project-planning/index.html">Project planning</a></li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="../report-writing/index.html">Report writing</a></li>
+        <li class="primary-nav__item"><a class="primary-nav__link" href="../other/index.html">Other</a></li>
+      </ul>
+    </nav>
+    <a class="header-cta" href="../contact.html">Get a quote</a>
+  </div>
+</header>
+<main id="main-content">
+  <section class="page-hero page-hero--overlay">
+    <div class="page-hero__media" aria-hidden="true">
+      <video autoplay muted loop playsinline>
+        <source src="../assets/videos/Echosight%20motion.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="page-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Data services</a></li>
+          <li aria-current="page">Automated acoustic triage</li>
+        </ol>
+      </nav>
+      <h1>Automated acoustic triage with ecologist oversight.</h1>
+      <p>We combine machine learning filters with manual QA to shrink review time, flag priority calls, and deliver auditable outputs.</p>
+      <div class="button-group">
+        <a class="cta-btn" href="../contact.html">Book a call</a>
+        <a class="cta-btn secondary-btn" href="../pricing.html">View pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="acoustic-impact">
+    <div class="section-header">
+      <h2 id="acoustic-impact">Results at a glance</h2>
+      <p>Automation accelerates processing without losing ecological nuance.</p>
+    </div>
+    <div class="tile-grid">
+      <article class="tile tile--accent">
+        <span class="tile__eyebrow">Time saved</span>
+        <p class="tile__stat">60% faster reviews</p>
+        <p class="tile__body">Model triage and priority queues let ecologists focus on meaningful calls.</p>
+      </article>
+      <article class="tile">
+        <span class="tile__eyebrow">Coverage</span>
+        <h3 class="tile__headline">200+ detector nights</h3>
+        <p class="tile__body">We scale scripts to handle detector deployments across large infrastructure or urban programmes.</p>
+      </article>
+      <article class="tile">
+        <span class="tile__eyebrow">Accuracy</span>
+        <h3 class="tile__headline">Two-stage QA</h3>
+        <p class="tile__body">Automated scoring plus ecologist verification keeps false positives low and audit trails clear.</p>
+      </article>
+      <article class="tile tile--muted">
+        <span class="tile__eyebrow">Integration</span>
+        <h3 class="tile__headline">BatExplorer &amp; Kaleidoscope</h3>
+        <p class="tile__body">We work inside your software licences or deliver exports ready for your teams.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="acoustic-how">
+    <div class="section-header">
+      <h2 id="acoustic-how">How automated triage works</h2>
+      <p>Automation handles the heavy lifting while experts make the final calls.</p>
+    </div>
+    <div class="tile-grid">
+      <article class="tile">
+        <span class="tile__eyebrow">Stage 1</span>
+        <h3 class="tile__headline">Model filtering</h3>
+        <p class="tile__body">We deploy tuned machine learning classifiers to score call likelihood, remove noise, and categorise by species group.</p>
+      </article>
+      <article class="tile">
+        <span class="tile__eyebrow">Stage 2</span>
+        <h3 class="tile__headline">Priority queueing</h3>
+        <p class="tile__body">Calls above project-defined thresholds are routed to ecologists with contextual metadata and recommended actions.</p>
+      </article>
+      <article class="tile">
+        <span class="tile__eyebrow">Stage 3</span>
+        <h3 class="tile__headline">Ecologist validation</h3>
+        <p class="tile__body">Experienced analysts review flagged calls, annotate behaviours, and confirm identifications.</p>
+      </article>
+      <article class="tile tile--muted">
+        <span class="tile__eyebrow">Stage 4</span>
+        <h3 class="tile__headline">Reporting &amp; feedback</h3>
+        <p class="tile__body">Findings sync to dashboards, GIS layers, and reporting templates—feeding back into future model training.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="acoustic-deliverables">
+    <div class="section-header">
+      <h2 id="acoustic-deliverables">What you receive</h2>
+      <p>Outputs tailored to your analysts, stakeholders, and planning requirements.</p>
+    </div>
+    <div class="feature-columns__grid">
+      <div>
+        <h3>Annotated call libraries</h3>
+        <p>Structured folders with spectrograms, call IDs, and ecologist notes accessible via SharePoint or your preferred platform.</p>
+      </div>
+      <div>
+        <h3>Effort &amp; activity dashboards</h3>
+        <p>Power BI, Tableau, or Google Data Studio dashboards summarise species activity by detector, night, and trigger thresholds.</p>
+      </div>
+      <div>
+        <h3>Planning-ready exports</h3>
+        <p>CSV and shapefile outputs aligned to BTO schemas, complete with QA statements and methodology summaries.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="acoustic-toolkit">
+    <div class="section-header">
+      <h2 id="acoustic-toolkit">Toolkit &amp; integrations</h2>
+      <p>We adapt to your software stack while keeping workflows reproducible.</p>
+    </div>
+    <div class="tile-grid">
+      <article class="tile">
+        <span class="tile__eyebrow">Software</span>
+        <ul class="stacked-list">
+          <li>BatExplorer, Kaleidoscope Pro, and Raven Lite</li>
+          <li>Python pipelines leveraging scikit-learn and custom classifiers</li>
+          <li>QGIS and ArcGIS for spatial context and mapping</li>
+        </ul>
+      </article>
+      <article class="tile tile--muted">
+        <span class="tile__eyebrow">Collaboration</span>
+        <ul class="stacked-list">
+          <li>Shared SharePoint or Teams folders with role-based permissions</li>
+          <li>Issue tracking through Monday.com or Jira for flagged anomalies</li>
+          <li>Weekly progress summaries circulated via Slack or email digests</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="acoustic-next-steps">
+    <div class="section-header">
+      <h2 id="acoustic-next-steps">Next steps</h2>
+      <p>Tell us your detector volumes, species priorities, and delivery deadlines so we can configure the right automation mix.</p>
+    </div>
+    <div class="button-group">
+      <a class="cta-btn" href="../contact.html">Request availability</a>
+      <a class="cta-btn secondary-btn" href="../pricing.html">Review pricing</a>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="acoustic-related">
+    <div class="section-header">
+      <h2 id="acoustic-related">Explore related data services</h2>
+      <p>Pair acoustic triage with upstream intake and downstream reporting.</p>
+    </div>
+    <div class="card-grid">
+      <a class="card card--link" href="survey-data-onboarding.html">
+        <h3>Survey data onboarding</h3>
+        <p>Start with consistent naming conventions and QA templates.</p>
+        <span class="card__link">Explore onboarding</span>
+      </a>
+      <a class="card card--link" href="video-thermal-review.html">
+        <h3>Video &amp; thermal review</h3>
+        <p>Align footage interpretation with acoustic findings for richer insight.</p>
+        <span class="card__link">See footage workflows</span>
+      </a>
+      <a class="card card--link" href="gis-deliverables.html">
+        <h3>GIS-ready deliverables</h3>
+        <p>Share interactive maps that visualise acoustic triggers spatially.</p>
+        <span class="card__link">View GIS options</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section cta-band" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-band__content">
+        <div>
+          <h2 id="cta-heading">Need to clear a detector backlog?</h2>
+          <p>We’ll configure automation and expert review so your reports land on time.</p>
+        </div>
+        <a class="cta-btn" href="../contact.html">Get a quote</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="../images/Echosight-logo.svg" alt="EchoSight" loading="lazy">
+      <p>Specialist ecological consultancy support covering southern England and national remote analysis.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../protected-species/index.html">Protected species surveys</a></li>
+        <li><a href="index.html">Data services</a></li>
+        <li><a href="../project-planning/index.html">Project planning</a></li>
+        <li><a href="../report-writing/index.html">Report writing</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../other/index.html">Other</a></li>
+      </ul>
+    </nav>
+    <div class="site-footer__contact">
+      <p>Email: <a href="mailto:jack.curry@echosight.co.uk">jack.curry@echosight.co.uk</a></p>
+      <p>Phone: <a href="tel:+447767436026">07767436026</a></p>
+      <p>Based in Newbury • Projects nationwide</p>
+      <p><a href="https://www.instagram.com/echosight.uk/" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+  </div>
+  <div class="site-footer__meta">
+    <p>&copy; 2025 EchoSight. All rights reserved.</p>
+  </div>
+</footer>
+<script src="../assets/js/nav.js"></script>
+</body>
+</html>
