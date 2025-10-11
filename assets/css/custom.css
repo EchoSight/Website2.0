@@ -638,39 +638,65 @@ video {
 }
 
 .timeline-grid {
+  display: grid;
+  gap: 1.75rem;
   counter-reset: timeline-step;
 }
 
 .timeline-tile {
+  --timeline-marker-size: 2.5rem;
   position: relative;
-  padding-top: 2.25rem;
+  padding: 1.5rem 1.75rem 1.5rem 3.75rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(57, 197, 187, 0.28);
+  box-shadow: 0 18px 44px rgba(19, 55, 86, 0.12);
 }
 
 .timeline-tile::before {
   counter-increment: timeline-step;
   content: counter(timeline-step);
   position: absolute;
-  top: 1rem;
-  left: 1.75rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: var(--timeline-marker-size);
+  height: var(--timeline-marker-size);
+  display: grid;
+  place-items: center;
   border-radius: 999px;
-  background: rgba(57, 197, 187, 0.18);
-  color: #27a597;
+  background: linear-gradient(135deg, rgba(57, 197, 187, 0.95), rgba(39, 165, 151, 0.9));
+  color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
+  box-shadow: 0 14px 32px rgba(39, 165, 151, 0.3);
 }
 
-.timeline-tile .tile__stat {
-  font-size: 1.5rem;
-  color: #132536;
+.timeline-tile::after {
+  content: '';
+  position: absolute;
+  left: calc(1.5rem + (var(--timeline-marker-size) / 2));
+  top: calc(1.5rem + var(--timeline-marker-size));
+  bottom: -1.75rem;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgba(57, 197, 187, 0.85), rgba(57, 197, 187, 0));
+  pointer-events: none;
 }
 
-.tile--muted.timeline-tile::before {
-  background: rgba(57, 197, 187, 0.26);
+.timeline-tile:last-child::after {
+  display: none;
+}
+
+.timeline-tile--muted {
+  background: rgba(239, 249, 248, 0.95);
+  border-color: rgba(57, 197, 187, 0.18);
+  box-shadow: 0 16px 36px rgba(19, 55, 86, 0.08);
+}
+
+.timeline-tile--muted::before {
+  background: rgba(39, 165, 151, 0.18);
+  color: #27a597;
+  box-shadow: none;
 }
 
 .tile {
@@ -770,22 +796,65 @@ video {
   margin-bottom: 0.25rem;
 }
 
-.tile blockquote {
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.quote-card {
+  position: relative;
+  padding: 2rem 2.25rem;
+  border-radius: 22px;
+  background: linear-gradient(140deg, #143c53, #1f6a76);
+  color: #ffffff;
+  box-shadow: 0 24px 56px rgba(16, 54, 82, 0.35);
+  overflow: hidden;
+}
+
+.quote-card::before {
+  content: '“';
+  position: absolute;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 7rem;
+  line-height: 1;
+  opacity: 0.14;
+  top: -1.5rem;
+  left: 0.75rem;
+}
+
+.quote-card blockquote {
   margin: 0;
   display: grid;
-  gap: 1rem;
-  font-style: italic;
+  gap: 1.25rem;
 }
 
-.tile blockquote p {
+.quote-card blockquote p {
   margin: 0;
+  font-style: italic;
+  font-size: 1.05rem;
 }
 
-.tile blockquote cite {
+.quote-card blockquote cite {
   display: block;
   font-style: normal;
   font-weight: 600;
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.quote-card--muted {
+  background: linear-gradient(140deg, rgba(57, 197, 187, 0.22), rgba(39, 165, 151, 0.28));
+  color: #143c53;
+  box-shadow: 0 16px 40px rgba(19, 55, 86, 0.18);
+}
+
+.quote-card--muted::before {
+  opacity: 0.12;
+  color: rgba(20, 60, 83, 0.28);
+}
+
+.quote-card--muted blockquote cite {
+  color: rgba(20, 60, 83, 0.7);
 }
 
 
