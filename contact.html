@@ -94,16 +94,18 @@
       <h2 id="contact-details">How to reach us</h2>
       <p>We partner exclusively with ecological consultancies, planners, and architects.</p>
     </div>
-    <div class="split-grid">
-      <div>
-        <p><strong>Email:</strong> <a href="mailto:jack.curry@echosight.co.uk">jack.curry@echosight.co.uk</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+447767436026">07767436026</a></p>
-        <p><strong>Location:</strong> Newbury, Berkshire &mdash; projects nationwide</p>
-      </div>
-      <div>
-        <p>Send us your red-line boundary, planning status, and any recent ecology work so we can respond with accurate next steps.</p>
-        <p>Prefer to book directly? <a href="mailto:jack.curry@echosight.co.uk">Email us</a> and we’ll coordinate calendars.</p>
-      </div>
+    <div class="tile-grid">
+      <article class="tile">
+        <span class="tile__eyebrow">Direct contact</span>
+        <p class="tile__body"><strong>Email:</strong> <a href="mailto:jack.curry@echosight.co.uk">jack.curry@echosight.co.uk</a></p>
+        <p class="tile__body"><strong>Phone:</strong> <a href="tel:+447767436026">07767436026</a></p>
+        <p class="tile__body"><strong>Location:</strong> Newbury, Berkshire &mdash; projects nationwide</p>
+      </article>
+      <article class="tile tile--muted">
+        <span class="tile__eyebrow">What to include</span>
+        <p class="tile__body">Send us your red-line boundary, planning status, and any recent ecology work so we can respond with accurate next steps.</p>
+        <p class="tile__body">Prefer to book directly? <a href="mailto:jack.curry@echosight.co.uk">Email us</a> and we’ll coordinate calendars.</p>
+      </article>
     </div>
   </section>
 
@@ -112,35 +114,39 @@
       <h2 id="contact-form-heading">Send a message</h2>
       <p>Complete the form and we’ll get back to you quickly.</p>
     </div>
-    <form id="contactForm" novalidate>
-      <div class="form-grid">
-        <label for="contact-name">Name</label>
-        <input type="text" id="contact-name" name="name" autocomplete="name" required>
+    <div class="tile-grid">
+      <article class="tile">
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" autocomplete="name" required>
 
-        <label for="contact-email">Email</label>
-        <input type="email" id="contact-email" name="email" autocomplete="email" required>
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" autocomplete="email" required>
 
-        <label for="contact-organisation">Organisation</label>
-        <input type="text" id="contact-organisation" name="organisation" autocomplete="organization">
+            <label for="contact-organisation">Organisation</label>
+            <input type="text" id="contact-organisation" name="organisation" autocomplete="organization">
 
-        <label for="contact-message">Message</label>
-        <textarea id="contact-message" name="message" rows="6" required></textarea>
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="6" required></textarea>
 
-        <label for="contact-timeline">Target timeline</label>
-        <input type="text" id="contact-timeline" name="timeline" placeholder="e.g. Surveys required before August">
+            <label for="contact-timeline">Target timeline</label>
+            <input type="text" id="contact-timeline" name="timeline" placeholder="e.g. Surveys required before August">
 
-        <div class="checkbox-group">
-          <input type="checkbox" id="contact-consent" name="consent" value="yes" required>
-          <label for="contact-consent">I’m happy for EchoSight to contact me about this enquiry.</label>
-        </div>
-        <div class="honeypot" aria-hidden="true">
-          <label for="contact-company">Company</label>
-          <input type="text" id="contact-company" name="company" tabindex="-1" autocomplete="off">
-        </div>
-        <button type="submit" class="cta-btn">Send message</button>
-        <p class="form-feedback" role="status" aria-live="polite"></p>
-      </div>
-    </form>
+            <div class="checkbox-group">
+              <input type="checkbox" id="contact-consent" name="consent" value="yes" required>
+              <label for="contact-consent">I’m happy for EchoSight to contact me about this enquiry.</label>
+            </div>
+            <div class="honeypot" aria-hidden="true">
+              <label for="contact-company">Company</label>
+              <input type="text" id="contact-company" name="company" tabindex="-1" autocomplete="off">
+            </div>
+            <button type="submit" class="cta-btn">Send message</button>
+            <p class="form-feedback" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </article>
+    </div>
   </section>
 
   <section class="section cta-band" aria-labelledby="cta-heading">
