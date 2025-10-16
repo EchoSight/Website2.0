@@ -86,7 +86,7 @@
           <li>Standard methods, licence-ready evidence</li>
           <li>Delivery within 5–7 working days</li>
         </ul>
-        <a class="cta-btn secondary-btn" href="#rate-card">See full rate card</a>
+        <button class="cta-btn secondary-btn rate-card-toggle" type="button" aria-expanded="false" aria-controls="rate-card-details">See full rate card</button>
       </article>
 
       <article class="tile">
@@ -101,7 +101,7 @@
           <li>QA included; audit trail provided</li>
           <li>48–72 hour turnaround options</li>
         </ul>
-        <a class="cta-btn secondary-btn" href="#rate-card">See full rate card</a>
+        <button class="cta-btn secondary-btn rate-card-toggle" type="button" aria-expanded="false" aria-controls="rate-card-details">See full rate card</button>
       </article>
 
       <article class="tile">
@@ -116,7 +116,7 @@
           <li>Bats, GCN, reptiles &amp; nesting birds awareness</li>
           <li>Site notes and same-day brief</li>
         </ul>
-        <a class="cta-btn secondary-btn" href="#rate-card">See full rate card</a>
+        <button class="cta-btn secondary-btn rate-card-toggle" type="button" aria-expanded="false" aria-controls="rate-card-details">See full rate card</button>
       </article>
 
       <article class="tile">
@@ -131,7 +131,7 @@
           <li>Method statements and mitigation input</li>
           <li>Compliant data capture</li>
         </ul>
-        <a class="cta-btn secondary-btn" href="#rate-card">See full rate card</a>
+        <button class="cta-btn secondary-btn rate-card-toggle" type="button" aria-expanded="false" aria-controls="rate-card-details">See full rate card</button>
       </article>
 
       <article class="tile tile--muted">
@@ -146,7 +146,7 @@
           <li>Risk categorisation aligned to BCT guidance</li>
           <li>Rapid findings with mitigation recommendations</li>
         </ul>
-        <a class="cta-btn secondary-btn" href="#rate-card">See full rate card</a>
+        <button class="cta-btn secondary-btn rate-card-toggle" type="button" aria-expanded="false" aria-controls="rate-card-details">See full rate card</button>
       </article>
     </div>
 
@@ -154,6 +154,58 @@
       Prices exclude VAT and travel. Final quotes depend on scope, access, urgency, and location.
       <a href="#rate-card">Download the full rate card for tiers, surcharges &amp; overnight options.</a>
     </p>
+
+    <div class="rate-card-panel" id="rate-card-details" aria-hidden="true" hidden tabindex="-1">
+      <div class="rate-card-panel__intro">
+        <h3>Guide rate card snapshot</h3>
+        <p class="rate-card-panel__subtitle">Immediate view of typical packages, inclusions, and deliverables before you request the full PDF.</p>
+      </div>
+      <div class="rate-card-panel__table-wrapper" role="region" aria-label="Guide rate card pricing table">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th scope="col">Package</th>
+              <th scope="col">What’s Included</th>
+              <th scope="col">Key Deliverables</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Bat Activity Survey (BCT-aligned)</th>
+              <td>Twilight survey slot, accredited surveyor, live thermal support, and calibrated detectors.</td>
+              <td>Field notes, activity mapping, licencing-ready evidence summary, and next-step guidance.</td>
+              <td><strong>From £295</strong> per surveyor/night</td>
+            </tr>
+            <tr>
+              <th scope="row">Remote Acoustic Analysis</th>
+              <td>Upload portal access, Kaleidoscope/BCID workflows, QA checks, and optional call tagging.</td>
+              <td>Species-level report, annotated audio snippets, and clear confidence ratings.</td>
+              <td><strong>From £150</strong> per dataset</td>
+            </tr>
+            <tr>
+              <th scope="row">Ecological Clerk of Works (EcOW)</th>
+              <td>On-site supervision, toolbox talks, RAMS updates, and liaison with your project team.</td>
+              <td>Daily briefing note, photo log, compliance checklist, and mitigation recommendations.</td>
+              <td><strong>From £420</strong> per day</td>
+            </tr>
+            <tr>
+              <th scope="row">Reptile &amp; GCN Support</th>
+              <td>Survey planning, field ecologists, trapping/refugia checks, and mitigation input.</td>
+              <td>Effort log, encounter records, compliant data sheets, and method statement updates.</td>
+              <td><strong>From £375</strong> per surveyor/day</td>
+            </tr>
+            <tr>
+              <th scope="row">Preliminary Roost Assessment (PRA)</th>
+              <td>Internal/external inspection, daytime ladder access, and photographic evidence capture.</td>
+              <td>Roost potential classification, photographic schedule, and priority actions list.</td>
+              <td><strong>From £245</strong> per structure</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="cta-btn secondary-btn rate-card-panel__close" type="button">Hide table</button>
+    </div>
   </section>
 
   <section class="section container" aria-labelledby="bat-surveys">
@@ -349,6 +401,7 @@
     <p>&copy; 2025 EchoSight. All rights reserved.</p>
   </div>
 </footer>
+<script src="assets/js/rate-card-toggle.js"></script>
 <script src="assets/js/nav.js"></script>
 </body>
 </html>
