@@ -1,10 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.getElementById('navToggle');
   const primaryNav = document.getElementById('primaryNav');
-  const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
-  const dropdownMenu = document.getElementById('protectedSpeciesMenu');
-  const dropdownItem = dropdownToggle?.closest('.primary-nav__item--has-children');
-  let dropdownCloseTimeout;
+  const dropdownToggles = Array.from(document.querySelectorAll('.nav-dropdown-toggle'));
+  const dropdowns = dropdownToggles
+    .map((toggle) => {
+      const controlsId = toggle.getAttribute('aria-controls');
+      const menu = controlsId ? document.getElementById(controlsId) : toggle.nextElementSibling;
+      return {
+        toggle,
+        menu,
+        item: toggle.closest('.primary-nav__item--has-children'),
+        closeTimeout: null,
+      };
+    })
+    .filter((dropdown) => dropdown.menu);
 
   const isDesktop = () => window.matchMedia('(min-width: 960px)').matches;
 
@@ -16,30 +25,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeMenu = () => setMenuState(false);
 
-  const clearDropdownCloseTimeout = () => {
-    if (!dropdownCloseTimeout) return;
-    clearTimeout(dropdownCloseTimeout);
-    dropdownCloseTimeout = null;
+  const clearDropdownCloseTimeout = (dropdown) => {
+    if (!dropdown?.closeTimeout) return;
+    clearTimeout(dropdown.closeTimeout);
+    dropdown.closeTimeout = null;
   };
 
-  const openDropdown = () => {
-    if (!dropdownToggle || !dropdownMenu) return;
-    clearDropdownCloseTimeout();
-    dropdownToggle.setAttribute('aria-expanded', 'true');
-    dropdownMenu.classList.add('primary-nav__submenu--open');
+  const openDropdown = (dropdown) => {
+    if (!dropdown?.toggle || !dropdown.menu) return;
+    clearDropdownCloseTimeout(dropdown);
+    dropdown.toggle.setAttribute('aria-expanded', 'true');
+    dropdown.menu.classList.add('primary-nav__submenu--open');
   };
 
-  const closeDropdown = () => {
-    if (!dropdownToggle || !dropdownMenu) return;
-    clearDropdownCloseTimeout();
-    dropdownToggle.setAttribute('aria-expanded', 'false');
-    dropdownMenu.classList.remove('primary-nav__submenu--open');
+  const closeDropdown = (dropdown) => {
+    if (!dropdown?.toggle || !dropdown.menu) return;
+    clearDropdownCloseTimeout(dropdown);
+    dropdown.toggle.setAttribute('aria-expanded', 'false');
+    dropdown.menu.classList.remove('primary-nav__submenu--open');
   };
 
-  const scheduleDropdownClose = () => {
-    clearDropdownCloseTimeout();
-    dropdownCloseTimeout = setTimeout(() => {
-      closeDropdown();
+  const closeAllDropdowns = () => {
+    dropdowns.forEach((dropdown) => closeDropdown(dropdown));
+  };
+
+  const scheduleDropdownClose = (dropdown) => {
+    clearDropdownCloseTimeout(dropdown);
+    dropdown.closeTimeout = setTimeout(() => {
+      closeDropdown(dropdown);
     }, 250);
   };
 
@@ -47,73 +60,83 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggle.addEventListener('click', () => {
       const willOpen = !primaryNav.classList.contains('primary-nav--open');
       setMenuState(willOpen);
-      closeDropdown();
+      closeAllDropdowns();
     });
   }
 
-  if (dropdownToggle && dropdownMenu) {
-    dropdownToggle.addEventListener('click', (event) => {
+  dropdowns.forEach((dropdown) => {
+    const { toggle, menu, item } = dropdown;
+
+    toggle.addEventListener('click', (event) => {
       event.preventDefault();
-      const expanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
       if (expanded) {
-        closeDropdown();
+        closeDropdown(dropdown);
       } else {
-        openDropdown();
+        closeAllDropdowns();
+        openDropdown(dropdown);
       }
     });
 
-    dropdownToggle.addEventListener('keydown', (event) => {
+    toggle.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
-        closeDropdown();
-        dropdownToggle.focus();
+        closeDropdown(dropdown);
+        toggle.focus();
       }
     });
 
-    dropdownMenu.addEventListener('keydown', (event) => {
+    menu.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
-        closeDropdown();
-        dropdownToggle.focus();
+        closeDropdown(dropdown);
+        toggle.focus();
       }
     });
 
-    if (dropdownItem) {
-      dropdownItem.addEventListener('mouseenter', () => {
+    if (item) {
+      item.addEventListener('mouseenter', () => {
         if (isDesktop()) {
-          openDropdown();
+          closeAllDropdowns();
+          openDropdown(dropdown);
         }
       });
-      dropdownItem.addEventListener('mouseleave', (event) => {
+
+      item.addEventListener('mouseleave', (event) => {
         if (!isDesktop()) return;
 
         const nextTarget = event.relatedTarget;
-        if (!nextTarget || !dropdownItem.contains(nextTarget)) {
-          scheduleDropdownClose();
+        if (!nextTarget || !item.contains(nextTarget)) {
+          scheduleDropdownClose(dropdown);
         }
       });
-      dropdownItem.addEventListener('focusin', openDropdown);
-      dropdownItem.addEventListener('focusout', (event) => {
-        if (!dropdownItem.contains(event.relatedTarget)) {
+
+      item.addEventListener('focusin', () => {
+        closeAllDropdowns();
+        openDropdown(dropdown);
+      });
+
+      item.addEventListener('focusout', (event) => {
+        if (!item.contains(event.relatedTarget)) {
           if (isDesktop()) {
-            scheduleDropdownClose();
+            scheduleDropdownClose(dropdown);
           } else {
-            closeDropdown();
+            closeDropdown(dropdown);
           }
         }
       });
     }
-  }
+  });
 
   document.addEventListener('click', (event) => {
     if (primaryNav && !primaryNav.contains(event.target) && !navToggle?.contains(event.target)) {
       closeMenu();
-      closeDropdown();
+      closeAllDropdowns();
     }
   });
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       closeMenu();
-      closeDropdown();
+      closeAllDropdowns();
     }
   });
 
