@@ -109,35 +109,6 @@
     </div>
   </section>
 
-  <!-- Availability calendar pulls data from assets/data/availability.json -->
-  <section class="section container" aria-labelledby="availability-heading">
-    <div class="section-header">
-      <h2 id="availability-heading">Check our availability</h2>
-      <p>Review upcoming mobilisation windows and choose the week that aligns with your programme.</p>
-    </div>
-    <div class="availability-calendar" data-availability-calendar>
-      <div class="availability-calendar__controls">
-        <button type="button" class="availability-calendar__nav availability-calendar__nav--prev" aria-label="Show previous month" data-calendar-prev>
-          <span aria-hidden="true">&#8249;</span>
-        </button>
-        <h3 class="availability-calendar__month" data-calendar-month></h3>
-        <button type="button" class="availability-calendar__nav availability-calendar__nav--next" aria-label="Show next month" data-calendar-next>
-          <span aria-hidden="true">&#8250;</span>
-        </button>
-      </div>
-      <div class="availability-calendar__legend" id="availabilityLegend">
-        <span class="availability-calendar__legend-item availability-calendar__legend-item--available">Available</span>
-        <span class="availability-calendar__legend-item availability-calendar__legend-item--limited">Limited</span>
-        <span class="availability-calendar__legend-item availability-calendar__legend-item--unavailable">Fully booked</span>
-      </div>
-      <div class="availability-calendar__grid" role="grid" aria-describedby="availabilityLegend" data-calendar-grid></div>
-      <p class="availability-calendar__message" data-calendar-message>We refresh this calendar every week so you can see which days are open.</p>
-      <div class="availability-calendar__status" data-calendar-status aria-live="polite">Loading availability&hellip;</div>
-      <p class="availability-calendar__updated" data-calendar-updated aria-live="polite"></p>
-      <p class="availability-calendar__help">Need a specific window? Send us your deadlines and we’ll try to release a slot.</p>
-    </div>
-  </section>
-
   <section class="section container" aria-labelledby="contact-form-heading">
     <div class="section-header">
       <h2 id="contact-form-heading">Send a message</h2>
@@ -219,7 +190,6 @@
   </div>
 </footer>
 <script src="assets/js/nav.js"></script>
-<script src="assets/js/availability.js"></script>
 <script src="assets/js/contact.js"></script>
 </body>
 </html>
