@@ -54,6 +54,7 @@
     <a class="header-cta" href="../contact.html">Get a quote</a>
   </div>
 </header>
+
 <main id="main-content">
   <section class="page-hero page-hero--overlay">
     <div class="page-hero__media" aria-hidden="true">
@@ -106,46 +107,94 @@
     </div>
   </section>
 
+  <!-- UPDATED SERVICES SECTION -->
   <section class="section container highlight-grid" aria-labelledby="data-services-offer">
     <div class="section-header">
       <h2 id="data-services-offer">Services</h2>
-      <p>Scale your ecological delivery with expert processing support.</p>
+      <p>Fixed-scope data packages you can book immediately.</p>
     </div>
+
     <div class="card-grid">
-      <article class="card">
-        <h3>Survey data onboarding</h3>
-        <p>Rapid ingestion of detector, video, and field records with naming conventions, metadata capture, and QA templates applied from day one.</p>
-      </article>
-      <article class="card">
-        <h3>BTO &amp; statutory workflows</h3>
-        <p>Validation scripts and export formats that drop straight into BTO, planning portal, and client reporting pipelines.</p>
-      </article>
+      <!-- 1. Acoustic analysis -->
       <article class="card card--link">
-        <h3>Automated acoustic triage</h3>
-        <p>Machine learning filters combined with ecologist review to surface priority calls, reduce false positives, and accelerate reporting.</p>
-        <a class="card__link" href="static-detector-analysis.html">Static detector analysis details</a>
+        <h3>Static detector analysis</h3>
+        <p>End-to-end processing of full nights of acoustic data into QA’d call lists and activity summaries.</p>
+        <ul>
+          <li>Includes: file ingestion, auto-triage + ecologist review, species/activity summaries</li>
+          <li>Deliverables: spreadsheets + GIS layers; optional figures for reports</li>
+        </ul>
+        <a class="card__link" href="static-detector-analysis.html">See package details</a>
       </article>
+
+      <!-- 2. Video & thermal review -->
       <article class="card card--link">
         <h3>Video &amp; thermal review</h3>
-        <p>High-volume footage processing that flags activity windows, annotates behaviours, and delivers shareable evidence reels with EchoSight Tracker.</p>
-        <a class="card__link" href="video-thermal-review.html">Active survey review details</a>
+        <p>High-volume footage processing with time-stamped annotations and shareable evidence reels.</p>
+        <ul>
+          <li>Includes: behaviour tagging, event windows, evidence clips</li>
+          <li>Deliverables: annotated media, logs, summary tables</li>
+        </ul>
+        <a class="card__link" href="video-thermal-review.html">See package details</a>
       </article>
+
+      <!-- 3. GIS mapping -->
       <article class="card card--link">
-        <h3>GIS-ready deliverables</h3>
-        <p>GeoPackage, shapefile, and web map outputs styled for stakeholder briefings and ready for your project teams to use immediately.</p>
-        <a class="card__link" href="gis.html">GIS mapping details</a>
+        <h3>GIS mapping &amp; deliverables</h3>
+        <p>Publication-ready maps and spatial datasets for planning and stakeholder briefings.</p>
+        <ul>
+          <li>Includes: symbology, layouts, web map (optional)</li>
+          <li>Deliverables: GeoPackage/shapefiles, PDFs/PNG figures</li>
+        </ul>
+        <a class="card__link" href="gis.html">See package details</a>
       </article>
+
+      <!-- 4. Desktop review (desk study) -->
       <article class="card">
-        <h3>Governance &amp; reporting</h3>
-        <p>Version-controlled workflows, GDPR-compliant data rooms, and dashboard trackers that keep clients informed through sign-off.</p>
+        <h3>Desktop review (desk study)</h3>
+        <p>Rapid constraints screening using third-party datasets and imagery to de-risk surveys and focus effort.</p>
+        <ul>
+          <li>Includes: LERC data request coordination, NBN Atlas &amp; MAGIC queries, designations, aerial imagery &amp; LiDAR checks</li>
+          <li>Deliverables: constraints summary, source citations, GIS layers &amp; overview maps</li>
+        </ul>
+      </article>
+
+      <!-- 5. Data onboarding -->
+      <article class="card">
+        <h3>Survey data onboarding</h3>
+        <p>Rapid intake of detector, video and field records with naming conventions and metadata applied from day one.</p>
+        <ul>
+          <li>Includes: folder structure, templates, QC checks</li>
+          <li>Deliverables: ready-to-process data room + intake report</li>
+        </ul>
+      </article>
+
+      <!-- 6. BTO/statutory submission -->
+      <article class="card">
+        <h3>BTO &amp; statutory submissions</h3>
+        <p>Validation and export workflows that slot straight into BTO and planning portal pipelines.</p>
+        <ul>
+          <li>Includes: schema validation, export formats, upload support</li>
+          <li>Deliverables: compliant files + submission log</li>
+        </ul>
+      </article>
+
+      <!-- 7. Data governance & reporting -->
+      <article class="card">
+        <h3>Data governance &amp; reporting packs</h3>
+        <p>Version-controlled workflows, GDPR-compliant data rooms and dashboards that track sign-off to completion.</p>
+        <ul>
+          <li>Includes: peer-review checklists, access controls, progress dashboard</li>
+          <li>Deliverables: report-ready tables/figures + audit trail</li>
+        </ul>
       </article>
     </div>
   </section>
 
+  <!-- RETITLED SECTION -->
   <section class="section container highlight-grid" aria-labelledby="data-toolkits">
     <div class="section-header">
-      <h2 id="data-toolkits">Toolkits &amp; integrations</h2>
-      <p>We plug into your preferred platforms to keep delivery seamless.</p>
+      <h2 id="data-toolkits">How we deliver</h2>
+      <p>Tooling and integrations that power every service.</p>
     </div>
     <div class="card-grid">
       <article class="card">
@@ -232,6 +281,7 @@
     </div>
   </section>
 </main>
+
 <footer class="site-footer">
   <div class="container site-footer__inner">
     <div class="site-footer__brand">
@@ -260,6 +310,7 @@
     <p>&copy; 2025 EchoSight. All rights reserved.</p>
   </div>
 </footer>
+
 <script src="../assets/js/nav.js"></script>
 </body>
 </html>
