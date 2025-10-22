@@ -1384,6 +1384,229 @@ video {
   font-weight: 600;
 }
 
+.page-hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 0.15rem;
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+.section-lead {
+  font-size: 1.05rem;
+  color: #5f6c7b;
+  color: var(--color-muted);
+  max-width: 60ch;
+}
+
+.reptile-card-grid {
+  margin-top: 2.25rem;
+}
+
+.reptile-card {
+  gap: 0.75rem;
+}
+
+.reptile-card__list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.reptile-card__list li {
+  margin: 0;
+}
+
+.reptile-coverage {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: stretch;
+}
+
+.reptile-coverage__content {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.coverage-note {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--color-primary);
+  border-radius: 14px;
+  background: rgba(57, 197, 187, 0.14);
+  color: #1f2a36;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.reptile-coverage__map {
+  position: relative;
+  min-height: 260px;
+  border-radius: 20px;
+  background: linear-gradient(160deg, rgba(57, 197, 187, 0.24) 0%, rgba(19, 55, 86, 0.22) 100%);
+  box-shadow: 0 20px 40px rgba(19, 55, 86, 0.12);
+  overflow: hidden;
+}
+
+.reptile-coverage__map::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 35%, rgba(255, 255, 255, 0.35) 0%, transparent 55%),
+    radial-gradient(circle at 70% 65%, rgba(255, 255, 255, 0.25) 0%, transparent 60%);
+  opacity: 0.9;
+}
+
+.reptile-coverage__bubble {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 1.4rem;
+  background: #ffffff;
+  background: var(--color-surface);
+  color: #1f2a36;
+  color: var(--color-text);
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 18px 36px rgba(19, 55, 86, 0.18);
+}
+
+.reptile-types {
+  margin-top: 2rem;
+}
+
+.reptile-type {
+  gap: 0.75rem;
+}
+
+.reptile-pricing {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.reptile-pricing table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.reptile-pricing thead th {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  background: rgba(57, 197, 187, 0.14);
+  padding: 1rem 1.25rem;
+}
+
+.reptile-pricing tbody td,
+.reptile-pricing tbody th {
+  padding: 1.1rem 1.35rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.reptile-pricing tbody th {
+  text-align: left;
+  font-weight: 600;
+}
+
+.reptile-pricing tbody tr:nth-child(even) {
+  background: rgba(57, 197, 187, 0.08);
+}
+
+.reptile-pricing tbody tr:last-child td,
+.reptile-pricing tbody tr:last-child th {
+  border-bottom: 0;
+}
+
+.reptile-pricing td:last-child {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  white-space: nowrap;
+}
+
+.reptile-pricing__note {
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--color-primary);
+  border-radius: 14px;
+  background: rgba(57, 197, 187, 0.12);
+  color: #1f2a36;
+  color: var(--color-text);
+}
+
+.reptile-contact {
+  background: var(--color-surface);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(2rem, 5vw, 3rem);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.reptile-contact__content {
+  display: grid;
+  gap: 1rem;
+  max-width: 560px;
+}
+
+.reptile-contact__content p {
+  color: var(--color-muted);
+}
+
+.reptile-contact .button-group {
+  justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .badge-list {
+    gap: 0.4rem;
+  }
+
+  .badge {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .reptile-contact .button-group {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .reptile-contact .button-group .cta-btn,
+  .reptile-contact .button-group .secondary-btn {
+    width: 100%;
+  }
+}
+
 @media (min-width: 960px) {
   .nav-toggle {
     display: none;
