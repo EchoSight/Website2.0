@@ -136,10 +136,10 @@
       <div
         class="support-coverage__map"
         role="region"
-        aria-label="Service coverage map showing a 60 mile radius from Newbury, United Kingdom"
+        aria-label="Service coverage map showing locations within 60 miles by road from Newbury, United Kingdom"
       >
         <div id="gcn-coverage-map" class="coverage-map__canvas" tabindex="0"></div>
-        <span class="support-coverage__bubble">60 mile radius from Newbury</span>
+        <span class="support-coverage__bubble">Up to 60 miles by road from Newbury</span>
       </div>
     </div>
   </section>
@@ -274,13 +274,47 @@
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
-    L.circle(newburyCoords, {
-      radius: 96560,
-      color: '#27a597',
-      weight: 2,
-      fillColor: '#39c5bb',
-      fillOpacity: 0.2,
-    }).addTo(map);
+    var coverageLayer;
+
+    function addDriveTimePolygon(data) {
+      if (!data) {
+        return;
+      }
+
+      coverageLayer = L.geoJSON(data, {
+        style: function () {
+          return {
+            color: '#27a597',
+            weight: 2,
+            fillColor: '#39c5bb',
+            fillOpacity: 0.2,
+          };
+        },
+      }).addTo(map);
+
+      var bounds = coverageLayer.getBounds();
+      if (bounds.isValid()) {
+        map.fitBounds(bounds, { padding: [20, 20] });
+      }
+    }
+
+    fetch('../../assets/data/newbury_60mi_drive_polygon.geojson')
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(addDriveTimePolygon)
+      .catch(function () {
+        L.circle(newburyCoords, {
+          radius: 96560,
+          color: '#27a597',
+          weight: 2,
+          fillColor: '#39c5bb',
+          fillOpacity: 0.2,
+        }).addTo(map);
+      });
 
     L.circleMarker(newburyCoords, {
       radius: 6,
