@@ -128,17 +128,17 @@
     </div>
     <div class="reptile-coverage">
       <div class="reptile-coverage__content">
-        <p class="section-lead">Teams are based from our Newbury hub and routinely deliver within a 60 mile radius (120 miles of return travel), covering Berkshire, Oxfordshire, Wiltshire, Hampshire, and the surrounding counties. Priority schemes outside this catchment can be scheduled with overnight allowances.</p>
-        <div class="coverage-note">Travel within 60 miles of Newbury is included in guide rates, covering up to 120 miles of return travel. Further mileage is charged at £0.55 per mile, with accommodation passed through at cost where needed.</div>
+        <p class="section-lead">Teams are based from our Newbury hub and routinely deliver within around 60 road miles (120 miles of return travel), reaching Banbury, Cirencester, Guildford, Portsmouth, and similar destinations across Berkshire, Oxfordshire, Wiltshire, Hampshire, and the surrounding counties. Priority schemes outside this catchment can be scheduled with overnight allowances.</p>
+        <div class="coverage-note">Travel within roughly 60 road miles of Newbury is included in guide rates (up to 120 miles of return travel). Further mileage is charged at £0.55 per mile, with accommodation passed through at cost where needed.</div>
         <p>Talk to us about phased developments or multi-site programmes—we will build a timetable that keeps your fieldwork efficient and compliant.</p>
       </div>
       <div
         class="reptile-coverage__map"
         role="region"
-        aria-label="Service coverage map showing a 60 mile radius from Newbury, United Kingdom"
+        aria-label="Service coverage map showing locations within 60 miles by road from Newbury, United Kingdom"
       >
         <div id="reptile-coverage-map" class="coverage-map__canvas" tabindex="0"></div>
-        <span class="reptile-coverage__bubble">60 mile radius from Newbury</span>
+        <span class="reptile-coverage__bubble">Up to ~60 road miles from Newbury</span>
       </div>
     </div>
   </section>
@@ -271,13 +271,47 @@
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
-    L.circle(newburyCoords, {
-      radius: 96560,
-      color: '#27a597',
-      weight: 2,
-      fillColor: '#39c5bb',
-      fillOpacity: 0.2,
-    }).addTo(map);
+    var coverageLayer;
+
+    function addDriveTimePolygon(data) {
+      if (!data) {
+        return;
+      }
+
+      coverageLayer = L.geoJSON(data, {
+        style: function () {
+          return {
+            color: '#27a597',
+            weight: 2,
+            fillColor: '#39c5bb',
+            fillOpacity: 0.2,
+          };
+        },
+      }).addTo(map);
+
+      var bounds = coverageLayer.getBounds();
+      if (bounds.isValid()) {
+        map.fitBounds(bounds, { padding: [20, 20] });
+      }
+    }
+
+    fetch('../../assets/data/newbury_60mi_drive_polygon.geojson')
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(addDriveTimePolygon)
+      .catch(function () {
+        L.circle(newburyCoords, {
+          radius: 96560,
+          color: '#27a597',
+          weight: 2,
+          fillColor: '#39c5bb',
+          fillOpacity: 0.2,
+        }).addTo(map);
+      });
 
     L.circleMarker(newburyCoords, {
       radius: 6,
