@@ -735,7 +735,8 @@ video {
 .pricing-table__price-cell {
   font-weight: 600;
   color: var(--color-primary-dark);
-  white-space: nowrap;
+  white-space: normal;
+  word-break: normal;
 }
 
 .pricing-table__list {
