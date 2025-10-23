@@ -27,8 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = formData.get('email')?.trim();
     const message = formData.get('message')?.trim();
     const consent = formData.get('consent');
+    const consentGiven = consent === 'yes';
 
-    if (!name || !email || !message || !consent) {
+    if (!name || !email || !message || !consentGiven) {
       setFeedback('Please complete the required fields before submitting.', true);
       return;
     }
@@ -47,6 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
       `Email: ${email}`,
       organisation ? `Organisation: ${organisation}` : null,
       timeline ? `Target timeline: ${timeline}` : null,
+      consentGiven
+        ? 'Consent: I’m happy for EchoSight to contact me about this enquiry.'
+        : null,
       '',
       'Project details:',
       message,
