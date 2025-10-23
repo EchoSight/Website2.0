@@ -179,6 +179,14 @@ video {
   color: var(--color-muted);
 }
 
+.site-brand__legal {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #5f6c7b;
+  color: var(--color-muted);
+}
+
 .site-brand__name {
   font-size: 1.1rem;
   font-weight: 600;
