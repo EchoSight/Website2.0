@@ -39,7 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    setFeedback('Thank you! We’ve received your message and will respond within one working day.');
-    form.reset();
+    const organisation = formData.get('organisation')?.trim();
+    const timeline = formData.get('timeline')?.trim();
+
+    const bodyLines = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      organisation ? `Organisation: ${organisation}` : null,
+      timeline ? `Target timeline: ${timeline}` : null,
+      '',
+      'Project details:',
+      message,
+    ].filter((line) => line !== null);
+
+    const subject = `New enquiry from ${name}`;
+    const mailtoLink = `mailto:jack.curry@echosight.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+      bodyLines.join('\n')
+    )}`;
+
+    setFeedback('Opening your email app with your enquiry details…');
+    window.location.href = mailtoLink;
   });
 });
