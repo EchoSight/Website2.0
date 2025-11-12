@@ -55,7 +55,7 @@
   </div>
 </header>
 <main id="main-content">
-  <section class="page-hero page-hero--overlay">
+  <section class="page-hero page-hero--overlay page-hero--pricing">
     <div class="page-hero__media" aria-hidden="true">
       <img src="images/header.jpg" alt="Thermal imaging survey scene" loading="lazy">
     </div>
@@ -75,23 +75,85 @@
     </div>
   </section>
 
-  <section class="section container" aria-labelledby="pricing-overview">
-    <div class="section-header">
-      <h2 id="pricing-overview">Ecology services — guide pricing</h2>
-      <p>Transparent “from” rates for common scopes. For detailed tiers and add-ons, download our full 2025 rate card.</p>
+  <section class="section section--raised" aria-labelledby="pricing-overview">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="pricing-overview">Ecology services — guide pricing</h2>
+        <p>Transparent “from” rates for common scopes. For detailed tiers and add-ons, download our full 2025 rate card.</p>
+      </div>
+      <div class="pricing-overview">
+        <div class="pricing-overview__copy">
+          <p>Use these guide figures to scope budgets quickly. Every quote is built around your site access, survey needs, and reporting deadlines.</p>
+          <ul class="pricing-highlights">
+            <li><span>Quotes turned around within one working day.</span></li>
+            <li><span>Inclusive travel within 30 miles of Newbury on on-site visits.</span></li>
+            <li><span>Survey evidence formatted for planning and licence submissions.</span></li>
+          </ul>
+        </div>
+        <aside class="pricing-overview__cta" role="complementary" aria-label="Request detailed pricing">
+          <h3>Need the full rate card?</h3>
+          <p>Share your project brief and we’ll send a tailored breakdown with optional add-ons, timelines, and availability.</p>
+          <a class="cta-btn" href="contact.html">Request detailed quote</a>
+        </aside>
+      </div>
+      <ul class="pricing-grid pricing-grid--featured" aria-label="Popular ecology service pricing">
+        <li class="pricing-grid__item">
+          <h3 class="pricing-grid__title">Bat surveys</h3>
+          <p class="pricing-grid__subtitle">Roost assessments &amp; dusk/dawn coverage</p>
+          <ul class="pricing-grid__features">
+            <li>Accredited ecologist on site</li>
+            <li>Thermal &amp; acoustic kit available</li>
+            <li>Planning-ready reporting</li>
+          </ul>
+          <p class="pricing-grid__price">Guide from £299 per site</p>
+        </li>
+        <li class="pricing-grid__item">
+          <h3 class="pricing-grid__title">Remote analysis</h3>
+          <p class="pricing-grid__subtitle">Acoustic, thermal &amp; static datasets</p>
+          <ul class="pricing-grid__features">
+            <li>Manual verification by specialists</li>
+            <li>Behaviour and activity insights</li>
+            <li>Reports delivered in 5 working days</li>
+          </ul>
+          <p class="pricing-grid__price">Guide from £100 per survey-night</p>
+        </li>
+        <li class="pricing-grid__item">
+          <h3 class="pricing-grid__title">Reptile site support</h3>
+          <p class="pricing-grid__subtitle">Field teams &amp; mitigation logistics</p>
+          <ul class="pricing-grid__features">
+            <li>Lead or assistant ecologists</li>
+            <li>RAMS-compliant welfare monitoring</li>
+            <li>Immediate site handover notes</li>
+          </ul>
+          <p class="pricing-grid__price">Guide from £45 per hour</p>
+        </li>
+        <li class="pricing-grid__item">
+          <h3 class="pricing-grid__title">GCN programme nights</h3>
+          <p class="pricing-grid__subtitle">Presence/absence &amp; population surveys</p>
+          <ul class="pricing-grid__features">
+            <li>Coordinated trap, torch &amp; egg searches</li>
+            <li>Early-morning debriefs &amp; records</li>
+            <li>Travel planning &amp; overnight support</li>
+          </ul>
+          <p class="pricing-grid__price">Guide from £180 per night</p>
+        </li>
+      </ul>
     </div>
-  <section class="section container" aria-labelledby="detailed-comparisons">
-    <div class="section-header">
-      <h2 id="detailed-comparisons">Detailed package comparisons</h2>
-      <p>Review the inclusions, deliverables, and guide prices for our most-requested survey and data service bundles without leaving this page.</p>
-    </div>
+  </section>
 
-    <details class="pricing-table" id="bat-package-comparison">
-      <summary class="pricing-table__summary">Bat survey packages — detailed view</summary>
-      <div class="pricing-table__content">
-        <div class="pricing-table__scroll">
-          <table class="pricing-table__table">
-            <caption id="bat-package-comparison-caption" class="visually-hidden">Comparison of bat survey packages, inclusions, deliverables, and guide prices.</caption>
+  <section class="section" aria-labelledby="detailed-comparisons">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="detailed-comparisons">Detailed package comparisons</h2>
+        <p>Review the inclusions, deliverables, and guide prices for our most-requested survey and data service bundles without leaving this page.</p>
+      </div>
+      <div class="pricing-accordion">
+        <details class="pricing-table" id="bat-package-comparison">
+          <summary class="pricing-table__summary">Bat survey packages — detailed view</summary>
+          <div class="pricing-table__content">
+            <div class="pricing-table__scroll">
+              <table class="pricing-table__table">
+                <caption id="bat-package-comparison-caption" class="visually-hidden">Comparison of bat survey packages, inclusions, deliverables, and guide prices.</caption>
             <thead>
               <tr>
                 <th scope="col">Package</th>
@@ -178,13 +240,13 @@
           </table>
         </div>
       </div>
-    </details>
+        </details>
 
-    <details class="pricing-table" id="reptile-package-comparison">
-      <summary class="pricing-table__summary">Reptile survey pricing — detailed view</summary>
-      <div class="pricing-table__content">
-        <div class="pricing-table__scroll">
-          <table class="pricing-table__table">
+        <details class="pricing-table" id="reptile-package-comparison">
+          <summary class="pricing-table__summary">Reptile survey pricing — detailed view</summary>
+          <div class="pricing-table__content">
+            <div class="pricing-table__scroll">
+              <table class="pricing-table__table">
             <caption id="reptile-package-comparison-caption" class="visually-hidden">Reptile survey pricing split by hourly and day rates, with inclusions and deliverables.</caption>
             <thead>
               <tr>
@@ -223,13 +285,13 @@
           </table>
         </div>
       </div>
-    </details>
+        </details>
 
-    <details class="pricing-table" id="gcn-package-comparison">
-      <summary class="pricing-table__summary">GCN field support packages — detailed view</summary>
-      <div class="pricing-table__content">
-        <div class="pricing-table__scroll">
-          <table class="pricing-table__table">
+        <details class="pricing-table" id="gcn-package-comparison">
+          <summary class="pricing-table__summary">GCN field support packages — detailed view</summary>
+          <div class="pricing-table__content">
+            <div class="pricing-table__scroll">
+              <table class="pricing-table__table">
             <caption id="gcn-package-comparison-caption" class="visually-hidden">Comparison of great crested newt field packages, inclusions, deliverables, and guide prices.</caption>
             <thead>
               <tr>
@@ -292,13 +354,13 @@
           </table>
         </div>
       </div>
-    </details>
+        </details>
 
-    <details class="pricing-table" id="data-service-package-comparison">
-      <summary class="pricing-table__summary">Remote analysis &amp; data services — detailed view</summary>
-      <div class="pricing-table__content">
-        <div class="pricing-table__scroll">
-          <table class="pricing-table__table">
+        <details class="pricing-table" id="data-service-package-comparison">
+          <summary class="pricing-table__summary">Remote analysis &amp; data services — detailed view</summary>
+          <div class="pricing-table__content">
+            <div class="pricing-table__scroll">
+              <table class="pricing-table__table">
             <caption id="data-service-package-comparison-caption" class="visually-hidden">Comparison of remote analysis and data service packages, inclusions, deliverables, and guide prices.</caption>
             <thead>
               <tr>
@@ -374,39 +436,45 @@
           </table>
         </div>
       </div>
-    </details>
+        </details>
+      </div>
+    </div>
   </section>
 
-  <section class="section container" aria-labelledby="additional-info">
-    <div class="section-header">
-      <h2 id="additional-info">Additional Information</h2>
-      <p>Know exactly what’s included before we arrive on site.</p>
+  <section class="section section--framed pricing-additional" aria-labelledby="additional-info">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="additional-info">Additional Information</h2>
+        <p>Know exactly what’s included before we arrive on site.</p>
+      </div>
+      <ul class="stacked-list">
+        <li>All onsite packages include up to 60 minutes for equipment setup and clear-up as standard.</li>
+        <li>On-site survey time is exclusive of setup/clear-up—your 2 hours is all field time.</li>
+        <li>Travel up to 30 miles total is included; additional travel beyond 30 miles is charged at £0.45/mile plus £30/hour for travel time.</li>
+        <li>Dual Deployment: EchoSight technician ensures on-site setup for both kits; analysis is post-survey only.</li>
+        <li>Dawn surveys carry a £40 surcharge per event.</li>
+        <li>Overnight stays required for sites over 90 minutes from Newbury; additional cost applies or accommodation can be client-booked.</li>
+        <li>Discounted bundles available for multi-phase or long-term projects.</li>
+        <li>All analysis assumes up to 2 hrs data per device per survey. Additional or complex data charged at £35/hr.</li>
+        <li>High-resolution thermal footage may require large file transfers; hard drive exchange can be organised.</li>
+      </ul>
+      <p>You pay for accuracy, not corner cutting. Every survey and review is delivered to the highest professional standard with robust, repeatable, and transparent findings.</p>
     </div>
-    <ul class="stacked-list">
-      <li>All onsite packages include up to 60 minutes for equipment setup and clear-up as standard.</li>
-      <li>On-site survey time is exclusive of setup/clear-up—your 2 hours is all field time.</li>
-      <li>Travel up to 30 miles total is included; additional travel beyond 30 miles is charged at £0.45/mile plus £30/hour for travel time.</li>
-      <li>Dual Deployment: EchoSight technician ensures on-site setup for both kits; analysis is post-survey only.</li>
-      <li>Dawn surveys carry a £40 surcharge per event.</li>
-      <li>Overnight stays required for sites over 90 minutes from Newbury; additional cost applies or accommodation can be client-booked.</li>
-      <li>Discounted bundles available for multi-phase or long-term projects.</li>
-      <li>All analysis assumes up to 2 hrs data per device per survey. Additional or complex data charged at £35/hr.</li>
-      <li>High-resolution thermal footage may require large file transfers; hard drive exchange can be organised.</li>
-    </ul>
-    <p>You pay for accuracy, not corner cutting. Every survey and review is delivered to the highest professional standard with robust, repeatable, and transparent findings.</p>
   </section>
 
-  <section class="section container" aria-labelledby="bespoke">
-    <div class="section-header">
-      <h2 id="bespoke">Looking for Something Bespoke?</h2>
-      <p>EchoSight offers tailored survey and analysis packages for unique sites, research projects, or complex requirements.</p>
+  <section class="section section--tint pricing-bespoke" aria-labelledby="bespoke">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="bespoke">Looking for Something Bespoke?</h2>
+        <p>EchoSight offers tailored survey and analysis packages for unique sites, research projects, or complex requirements.</p>
+      </div>
+      <ol class="stacked-list">
+        <li>We’ll discuss your site, objectives, and constraints.</li>
+        <li>We design a custom scope, schedule, and reporting plan—no recycled templates.</li>
+        <li>You receive a transparent, upfront quote before you commit.</li>
+      </ol>
+      <p>You get direct access to Jack (lead ecologist &amp; consultant), the best tech and methods for your situation, and uncompromising data quality. <a href="contact.html">Request a bespoke proposal</a>.</p>
     </div>
-    <ol class="stacked-list">
-      <li>We’ll discuss your site, objectives, and constraints.</li>
-      <li>We design a custom scope, schedule, and reporting plan—no recycled templates.</li>
-      <li>You receive a transparent, upfront quote before you commit.</li>
-    </ol>
-    <p>You get direct access to Jack (lead ecologist &amp; consultant), the best tech and methods for your situation, and uncompromising data quality. <a href="contact.html">Request a bespoke proposal</a>.</p>
   </section>
 
   <section class="section cta-band" aria-labelledby="cta-heading">
