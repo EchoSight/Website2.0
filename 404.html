@@ -254,18 +254,34 @@
     const spotlight = document.getElementById("spotlight");
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+    const centerSpotlight = () => {
+      const rect = wrap.getBoundingClientRect();
+      updateSpotlight(rect.width / 2, rect.height / 2);
+    };
+
     function updateSpotlight(x, y) {
-      spotlight.style.background = `radial-gradient(circle closest-corner at ${x}px ${y}px, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.9) 65%)`;
+      const rect = wrap.getBoundingClientRect();
+      const clampedX = Math.max(0, Math.min(rect.width, x));
+      const clampedY = Math.max(0, Math.min(rect.height, y));
+
+      spotlight.style.background = `radial-gradient(circle closest-corner at ${clampedX}px ${clampedY}px, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.9) 65%)`;
     }
 
     if (!prefersReduced.matches) {
-      wrap.addEventListener("pointermove", (event) => {
-        updateSpotlight(event.clientX, event.clientY);
-      });
+      const handleMove = (event) => {
+        const point = event.touches ? event.touches[0] : event;
+        const rect = wrap.getBoundingClientRect();
+        updateSpotlight(point.clientX - rect.left, point.clientY - rect.top);
+      };
 
-      wrap.addEventListener("pointerleave", () => {
-        spotlight.style.background = "rgba(0, 0, 0, 0.85)";
-      });
+      centerSpotlight();
+
+      wrap.addEventListener("pointermove", handleMove);
+      wrap.addEventListener("mousemove", handleMove);
+      wrap.addEventListener("touchmove", handleMove, { passive: true });
+
+      wrap.addEventListener("pointerleave", centerSpotlight);
+      window.addEventListener("resize", centerSpotlight);
     }
   </script>
 </body>
