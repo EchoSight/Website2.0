@@ -148,33 +148,27 @@
       <h2 id="types-heading">Survey types we support day-to-day</h2>
       <p class="section-lead">Choose the mix of inspections, activity surveys, and analysis your project requires.</p>
     </div>
-    <div class="survey-tiles" aria-live="polite">
-      <div class="survey-tiles__grid" id="surveyTilesGrid" role="list"></div>
-      <noscript>
-        <div class="card-grid support-types">
-          <article class="card support-type">
-            <h3>Preliminary roost assessments</h3>
-            <p>Daytime inspections of structures and trees to classify roost potential and trigger further effort.</p>
-          </article>
-          <article class="card support-type">
-            <h3>Emergence &amp; re-entry surveys</h3>
-            <p>Under License dusk and dawn coverage with thermal imaging and live call verification for robust evidence.</p>
-          </article>
-          <article class="card support-type">
-            <h3>Activity transects &amp; static monitoring</h3>
-            <p>Transects, automated detectors, and remote review to map commuting routes and foraging hotspots.</p>
-          </article>
-          <article class="card support-type">
-            <h3>Night-time bat walkover</h3>
-            <p>Standard nocturnal walkover (5 km transect) covering sunset to post-emergence with live data capture and reporting.</p>
-          </article>
-          <article class="card support-type">
-            <h3>Licence applications &amp; mitigation</h3>
-            <p>Method statements, compensation design, and monitoring plans produced alongside your lead ecologist.</p>
-          </article>
-        </div>
-      </noscript>
-      <div class="survey-tiles__credits" id="surveyTilesCredits" aria-label="Image credits"></div>
+    <div class="card-grid support-types">
+      <article class="card support-type">
+        <h3>Preliminary roost assessments</h3>
+        <p>Daytime inspections of structures and trees to classify roost potential and trigger further effort.</p>
+      </article>
+      <article class="card support-type">
+        <h3>Emergence &amp; re-entry surveys</h3>
+        <p>Under License dusk and dawn coverage with thermal imaging and live call verification for robust evidence.</p>
+      </article>
+      <article class="card support-type">
+        <h3>Activity transects &amp; static monitoring</h3>
+        <p>Transects, automated detectors, and remote review to map commuting routes and foraging hotspots.</p>
+      </article>
+      <article class="card support-type">
+        <h3>Night-time bat walkover</h3>
+        <p>Standard nocturnal walkover (5 km transect) covering sunset to post-emergence with live data capture and reporting.</p>
+      </article>
+      <article class="card support-type">
+        <h3>Licence applications &amp; mitigation</h3>
+        <p>Method statements, compensation design, and monitoring plans produced alongside your lead ecologist.</p>
+      </article>
     </div>
   </section>
 
@@ -407,164 +401,6 @@
     <p>&copy; 2025 EchoSight. All rights reserved.</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var surveyTiles = [
-      {
-        title: 'Preliminary roost assessments',
-        subtitle: 'Daytime inspections of structures and trees to classify roost potential and trigger further effort.',
-        href: '#contact',
-        imageUrl:
-          'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&q=80',
-        imageAlt: 'Surveyor inspecting roof eaves with safety gear during a daytime building check',
-        credit: {
-          name: 'Jacek Dylag',
-          platform: 'Unsplash',
-          url: 'https://unsplash.com/photos/person-sitting-on-brown-concrete-wall-cF5Q7u_mow8',
-        },
-      },
-      {
-        title: 'Emergence & re-entry surveys',
-        subtitle: 'Under License dusk and dawn coverage with thermal imaging and live call verification for robust evidence.',
-        href: '#contact',
-        imageUrl:
-          'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80',
-        imageAlt: 'Licenced surveyor using a headtorch and thermal camera at dusk near a structure',
-        credit: {
-          name: 'Tim Foster',
-          platform: 'Unsplash',
-          url: 'https://unsplash.com/photos/person-holding-flashlight-near-cave-opening-DVVEItVzTB0',
-        },
-      },
-      {
-        title: 'Activity transects & static monitoring',
-        subtitle: 'Transects, automated detectors, and remote review to map commuting routes and foraging hotspots.',
-        href: '#contact',
-        imageUrl:
-          'https://images.unsplash.com/photo-1444044205806-38f3ed106c10?auto=format&fit=crop&q=80',
-        imageAlt: 'Automated bat detector mounted on a tree along a hedgerow survey route',
-        credit: {
-          name: 'John Westrock',
-          platform: 'Unsplash',
-          url: 'https://unsplash.com/photos/black-and-green-digital-device-on-tree-8cGQv48Q2f8',
-        },
-      },
-      {
-        title: 'Night-time bat walkover',
-        subtitle: 'Standard nocturnal walkover (5 km transect) covering sunset to post-emergence with live data capture and reporting.',
-        href: '#contact',
-        imageUrl:
-          'https://images.unsplash.com/photo-1501703979959-797917eb21c8?auto=format&fit=crop&q=80',
-        imageAlt: 'Survey team walking with headtorches along a rural track at night',
-        credit: {
-          name: 'Alex Wigan',
-          platform: 'Unsplash',
-          url: 'https://unsplash.com/photos/person-walking-on-road-during-nighttime-phIFdC6lA4E',
-        },
-      },
-      {
-        title: 'Licence applications & mitigation',
-        subtitle: 'Method statements, compensation design, and monitoring plans produced alongside your lead ecologist.',
-        href: '#contact',
-        imageUrl:
-          'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80',
-        imageAlt: 'Ecologist installing a bat box on mature woodland habitat',
-        credit: {
-          name: 'Todd Quackenbush',
-          platform: 'Unsplash',
-          url: 'https://unsplash.com/photos/person-in-blue-shirt-standing-on-stairs-rLFHG0YeRoY',
-        },
-      },
-    ];
-
-    function buildSrcSet(baseUrl) {
-      var sizes = [900, 1400, 1800];
-      return sizes
-        .map(function (size) {
-          return baseUrl + '&w=' + size + ' ' + size + 'w';
-        })
-        .join(', ');
-    }
-
-    function createSurveyTile(tile) {
-      var tileElement = document.createElement('a');
-      tileElement.className = 'survey-tile';
-      tileElement.href = tile.href;
-      tileElement.setAttribute('role', 'listitem');
-      tileElement.setAttribute('aria-label', tile.title + ': ' + tile.subtitle);
-
-      var image = document.createElement('img');
-      image.src = tile.imageUrl + '&w=1200';
-      image.srcset = buildSrcSet(tile.imageUrl);
-      image.sizes = '(min-width: 1024px) 32vw, (min-width: 640px) 48vw, 100vw';
-      image.alt = tile.imageAlt;
-      image.loading = 'lazy';
-
-      var content = document.createElement('div');
-      content.className = 'survey-tile__content';
-
-      var title = document.createElement('h3');
-      title.className = 'survey-tile__title';
-      title.textContent = tile.title;
-
-      var subtitle = document.createElement('p');
-      subtitle.className = 'survey-tile__subtitle';
-      subtitle.textContent = tile.subtitle;
-
-      content.appendChild(title);
-      content.appendChild(subtitle);
-      tileElement.appendChild(image);
-      tileElement.appendChild(content);
-      return tileElement;
-    }
-
-    function renderSurveyTiles() {
-      var grid = document.getElementById('surveyTilesGrid');
-      var creditsContainer = document.getElementById('surveyTilesCredits');
-
-      if (!grid) {
-        return;
-      }
-
-      surveyTiles.forEach(function (tile) {
-        grid.appendChild(createSurveyTile(tile));
-      });
-
-      if (creditsContainer) {
-        var uniqueCredits = [];
-        surveyTiles.forEach(function (tile) {
-          var identifier = tile.credit.name + tile.credit.platform;
-          var exists = uniqueCredits.some(function (credit) {
-            return credit.id === identifier;
-          });
-
-          if (!exists) {
-            uniqueCredits.push({ id: identifier, info: tile.credit });
-          }
-        });
-
-        var creditLinks = uniqueCredits
-          .map(function (credit) {
-            var info = credit.info;
-            return (
-              '<a href="' +
-              info.url +
-              '" target="_blank" rel="noopener">' +
-              info.name +
-              ' (' +
-              info.platform +
-              ')</a>'
-            );
-          })
-          .join(' · ');
-
-        creditsContainer.innerHTML = '<strong>Photos from Unsplash:</strong> ' + creditLinks;
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', renderSurveyTiles);
-  })();
-</script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
