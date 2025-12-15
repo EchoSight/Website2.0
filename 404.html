@@ -52,14 +52,21 @@
     }
 
     .spotlight {
+      --spotlight-x: 50%;
+      --spotlight-y: 50%;
+      --spotlight-size: 340px;
+
       position: absolute;
       inset: 0;
       background: radial-gradient(
-        circle closest-corner at 70% 40%,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.9) 65%
+        circle var(--spotlight-size) at var(--spotlight-x) var(--spotlight-y),
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 28%,
+        rgba(0, 0, 0, 0.25) 38%,
+        rgba(0, 0, 0, 0.9) 70%,
+        rgba(0, 0, 0, 0.96) 100%
       );
-      transition: background 0.12s linear;
+      transition: background 0.12s linear, opacity 0.12s linear;
       z-index: 2;
       pointer-events: none;
     }
@@ -264,7 +271,8 @@
       const clampedX = Math.max(0, Math.min(rect.width, x));
       const clampedY = Math.max(0, Math.min(rect.height, y));
 
-      spotlight.style.background = `radial-gradient(circle closest-corner at ${clampedX}px ${clampedY}px, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.9) 65%)`;
+      spotlight.style.setProperty("--spotlight-x", `${clampedX}px`);
+      spotlight.style.setProperty("--spotlight-y", `${clampedY}px`);
     }
 
     if (!prefersReduced.matches) {
