@@ -807,6 +807,10 @@ video {
   .pricing-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .pricing-grid--two-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .pricing-note {
