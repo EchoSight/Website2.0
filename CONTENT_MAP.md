@@ -12,6 +12,7 @@
 | N/A | `protected-species/reptiles/index.html`, `protected-species/gcn/index.html` | New pages created; marked [sample] where fresh copy required. |
 | N/A | `data-services/index.html` | Built using existing EchoSight Tracker messaging and data workflow notes. |
 | N/A | `project-planning/index.html`, `other/index.html` | New routes structured per requirements; [sample] sections flagged where new copy supplied. |
+| N/A | `compliance.html` | New compliance & governance page outlining H&amp;S, QA, and data governance statements plus document availability. |
 | `assets/js/nav.js` | `assets/js/nav.js` | Navigation script replaced with accessible dropdown & mobile handling. |
 | N/A | `assets/js/contact.js` | New form validation and spam mitigation logic. |
 | `assets/css/custom.css` | `assets/css/custom.css` | Rebuilt global styles to support new layout components. |
