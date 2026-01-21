@@ -566,6 +566,11 @@ video {
   height: auto;
 }
 
+.consultancy-support__card {
+  align-self: flex-start;
+  padding: 1.25rem 1.5rem;
+}
+
 .consultancy-support__disclaimer {
   margin: 0;
   font-size: 0.9rem;
