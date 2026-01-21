@@ -1337,41 +1337,6 @@ video {
   background: linear-gradient(160deg, #eff9f8, #f7fbfb);
 }
 
-.client-support__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  align-items: center;
-}
-
-.client-support__content p {
-  margin-top: 0;
-}
-
-.client-support__logo-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 18px;
-  padding: 2rem;
-  box-shadow: 0 12px 30px rgba(12, 50, 77, 0.08);
-  display: grid;
-  gap: 1rem;
-  justify-items: center;
-  text-align: center;
-}
-
-.client-support__logo-card img {
-  max-width: min(260px, 100%);
-  height: auto;
-  filter: saturate(0.9);
-}
-
-.client-support__eyebrow {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: rgba(19, 55, 86, 0.65);
-}
-
 .feature-columns {
   background: transparent;
 }
