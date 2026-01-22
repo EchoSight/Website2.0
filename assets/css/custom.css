@@ -558,6 +558,22 @@ video {
   gap: 1rem;
 }
 
+.consultancy-support__logo .card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 960px) {
+  .consultancy-support__logo .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .consultancy-support__logo .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .consultancy-support__band {
   background: #15242f;
   border: 1px solid rgba(255, 255, 255, 0.08);
