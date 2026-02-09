@@ -559,7 +559,7 @@ video {
 }
 
 .consultancy-support__logo .card-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @media (max-width: 960px) {
@@ -606,6 +606,31 @@ video {
   transform: translateY(-2px);
   box-shadow: 0 20px 40px rgba(15, 31, 45, 0.14);
   border-color: rgba(57, 197, 187, 0.4);
+}
+
+
+.consultancy-support__card {
+  text-decoration: none;
+}
+
+.consultancy-support__proof {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #314657;
+  text-align: center;
+}
+
+.consultancy-support__tag {
+  align-self: center;
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(57, 197, 187, 0.14);
+  color: #146f67;
 }
 
 .consultancy-support__disclaimer {
